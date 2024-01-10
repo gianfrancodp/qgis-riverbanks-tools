@@ -1,37 +1,35 @@
-# qgis-riverbanks-tools
+<p align="center">
+<img src="Models/other_data/QRT_main_image.png">
+</p>
 
-***DISCLAIMER***
+A simple tools for analysis of Riverbanks in Qgis; algorytms and scripts are written with Qgis 3 graphical modeler and Python.
 
-This repository contains algorithms that for calculating and analyzing some hydrographic features that are useful for analyses on historical course trends and river geometry.
-
-The work was developed within my research path with the University of Catania and in particular through a Scientific collaboration agreement betweent the Basin Authority of the Hydrographic District of Sicily [(AdB Sicilia)](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/contatti-dipartimento-autorita-bacino-adb) and the Department of Civil Engineering and Architecture [(DICaR)](https://www.dicar.unict.it) of the University of Catania, for hydrological and hydraulic studies for the identification of river belts, for the identification of NWRM (Natural Water Retention Measures), and for the definition of lamination plans of the rivers.
-
-# Table of content
+## Table of content
 1. [How to use on qgis](#how-to-use-on-qgis)
 2. [Confined Valley Index](#confined-valley-index)
+3. [Disclaimer and Credits](#disclaimer-and-credits)
 
 -----------
 
 ## How to use on Qgis
 
 Download the specific model3 files in this repository:
-- [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3) (Qgis 3.28.11 Firenze or highter)
-- other work in progress...
+- [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3) (Qgis 3.28.11 Firenze or higher)
+- *[...] This list will be updated soon*
 
-Open Qgis (developed and testet with Qgis 3.28.11)
+NOTE: If you download file directly from GitHub webpage may assure that the extension of file must be .mopdel3 for properly use in Qgis
 
-go to Processing sidebar and go to Model icon menu
-
-Click on "Open existing model" and select the file in your filesystem
-
-Then you find it in your processing sidebar under folder *FSC*
+1. Open Qgis (developed and testet with Qgis 3.28.11)
+2. Go to Processing sidebar and go to Model icon menu
+3. Click on "Open existing model" and select the file in your filesystem
+4. Then you find it in your processing sidebar under folder *FSC*
 
 -------------
 
 
 
 ## Confined Valley Index
-v. 1.1
+v. 1.1 (December 2023)
 
 [DOWNLOAD PDF schema](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.drawio.pdf)
 
@@ -42,7 +40,7 @@ The algorithm is used to calculate the relationship $ C_{Vi} $ between the *widt
 $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
 <p align="center">
-<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1 -A.jpg" width="500">
+<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1 -A.jpg" width="600">
 </p>
 
 ***Input data required***
@@ -57,7 +55,7 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 | Valley Bottom     | Polygon       | Polygon features that define the Valley Bottom of the river   |
 
 <p align="center">
-<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg" width="300"/>
+<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg" width="500"/>
 </p>
 
 Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated,  the minimum value is taken. 
@@ -76,3 +74,15 @@ In Output a ***Vector Points*** along the river axis containing the calculated d
 | min-VB-R      | Float | Miminum distance to the Right ValleyBottom|
 | transect_d    | Float | Progressive distance along river path     |
 
+## Disclaimer and credits
+
+This repository contains algorithms that for calculating and analyzing some hydrographic features that are useful for analyses on historical course trends and river geometry.
+
+The work was developed within my research path with the University of Catania and in particular through a Scientific collaboration agreement between the Basin Authority of the Hydrographic District of Sicily [(AdB Sicilia)](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/contatti-dipartimento-autorita-bacino-adb) and the Department of Civil Engineering and Architecture [(DICaR)](https://www.dicar.unict.it) of the University of Catania, for hydrological and hydraulic studies for the identification of river belts, for the identification of NWRM (Natural Water Retention Measures), and for the definition of lamination plans of the rivers.
+
+### List of contributors
+
+- [Gianfranco Di Pietro](https://gianfrancodp.github.io), *PhD student at Università di Catania*
+- [Rosaria Ester Musumeci](https://www.dicar.unict.it/faculty/rosaria.ester.musumeci), *Associate professor of Hydraulics - Università di Catania*
+- Valeria Pennisi, *Researcher at Università di Catania*
+- Martina Stagnitti, *Researcer at Università di Catania*
