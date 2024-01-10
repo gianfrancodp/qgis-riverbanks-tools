@@ -1,2 +1,78 @@
 # qgis-riverbanks-tools
-Qgis3 models and python algorithms useful for historical riverbank and other hydrographic analysis
+
+***DISCLAIMER***
+
+This repository contains algorithms that for calculating and analyzing some hydrographic features that are useful for analyses on historical course trends and river geometry.
+
+The work was developed within my research path with the University of Catania and in particular through a Scientific collaboration agreement betweent the Basin Authority of the Hydrographic District of Sicily [(AdB Sicilia)](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/contatti-dipartimento-autorita-bacino-adb) and the Department of Civil Engineering and Architecture [(DICaR)](https://www.dicar.unict.it) of the University of Catania, for hydrological and hydraulic studies for the identification of river belts, for the identification of NWRM (Natural Water Retention Measures), and for the definition of lamination plans of the rivers.
+
+# Table of content
+1. [How to use on qgis](#how-to-use-on-qgis)
+2. [Confined Valley Index](#confined-valley-index)
+
+-----------
+
+## How to use on Qgis
+
+Download the specific model3 files in this repository:
+- [Confined Valley Index](Confined_Valley_Index_v.1.1.model3) (Qgis 3.28.11 Firenze or highter)
+- other work in progress...
+
+Open Qgis (developed and testet with Qgis 3.28.11)
+
+go to Processing sidebar and go to Model icon menu
+
+Click on "Open existing model" and select the file in your filesystem
+
+Then you find it in your processing sidebar under folder *FSC*
+
+-------------
+
+
+
+## Confined Valley Index
+v. 1.1
+
+[DOWNLOAD PDF schema](simplified-diagram/Confined_Valley_index_v.1.1.drawio.pdf)
+
+***Description***
+
+The algorithm is used to calculate the relationship $ C_{Vi} $ between the *width* of the ValleyBottom $ VB_W $ and the *banks of a river* $ RB_W $.
+
+$$ C_{Vi} = {{VB_W} \over {RB_W}} $$
+
+<p align="center">
+<img src="simplified-diagram/Confined_Valley_index_v.1.1 -A.jpg" width="500">
+</p>
+
+***Input data required***
+
+| Parameter name    | Data Type     | Description                                                   |
+|-------------------|---------------|---------------------------------------------------------------|
+| LEFT River Bank   | _Vector Line_ | Line of the Left riverbank                                    |
+| RIGHT River Bank  | _Vector Line_ | Line of the Right riverbank                                   |
+| River Line        | _Vector Line_ | Path of the river                                             |
+| Transects STEP    | Integer       | distance in meters along the path used for creating transects |
+| Transects WIDTH   | Integer       | Lenght in meters of transects across river path               |
+| Valley Bottom     | Polygon       | Polygon features that define the Valley Bottom of the river   |
+
+<p align="center">
+<img src="simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg" width="300"/>
+</p>
+
+Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated,  the minimum value is taken. 
+
+In Output a ***Vector Points*** along the river axis containing the calculated data is generated with this field table:
+
+| Filed name    | Data  |    Desription                             |
+|---------------|-------|-------------------------------------------|
+| SEZ-ID        | Int   | Transect identifier (key field)           |
+|**VB_RB-index**| Float | $ C_{Vi} = {{VB_W} \over {RB_W}} $        |
+| RB-W          | Float | River bank width                          |
+| VB-W          | Float | ValleyBottom Width                        |
+| min-RB-R      | Float | Minimum distance to the Right Riverbank   |
+| min-RB-L      | Float | Minimum distance to the Left Riverbank    |
+| min-VB-L      | Float | Minimum distancen to the Left ValleyBottom|
+| min-VB-R      | Float | Miminum distance to the Right ValleyBottom|
+| transect_d    | Float | Progressive distance along river path     |
+
