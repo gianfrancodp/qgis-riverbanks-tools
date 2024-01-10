@@ -15,7 +15,7 @@ The work was developed within my research path with the University of Catania an
 ## How to use on Qgis
 
 Download the specific model3 files in this repository:
-- [Confined Valley Index](Confined_Valley_Index_v.1.1.model3) (Qgis 3.28.11 Firenze or highter)
+- [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3) (Qgis 3.28.11 Firenze or highter)
 - other work in progress...
 
 Open Qgis (developed and testet with Qgis 3.28.11)
@@ -33,7 +33,7 @@ Then you find it in your processing sidebar under folder *FSC*
 ## Confined Valley Index
 v. 1.1
 
-[DOWNLOAD PDF schema](simplified-diagram/Confined_Valley_index_v.1.1.drawio.pdf)
+[DOWNLOAD PDF schema](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.drawio.pdf)
 
 ***Description***
 
@@ -42,7 +42,7 @@ The algorithm is used to calculate the relationship $ C_{Vi} $ between the *widt
 $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
 <p align="center">
-<img src="simplified-diagram/Confined_Valley_index_v.1.1 -A.jpg" width="500">
+<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1 -A.jpg" width="500">
 </p>
 
 ***Input data required***
@@ -57,7 +57,7 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 | Valley Bottom     | Polygon       | Polygon features that define the Valley Bottom of the river   |
 
 <p align="center">
-<img src="simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg" width="300"/>
+<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg" width="300"/>
 </p>
 
 Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated,  the minimum value is taken. 
