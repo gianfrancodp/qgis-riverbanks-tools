@@ -67,7 +67,7 @@ In Output a ***Vector Points*** along the river axis containing the calculated d
 | Filed name    | Data  |    Desription                             |
 |---------------|-------|-------------------------------------------|
 | SEZ-ID        | Int   | Transect identifier (key field)           |
-|**VB_RB-index**| Float | $ C_{Vi} = {{VB_W} \over {RB_W}} $        |
+|**VB_RB-index**| Float | $C_{Vi} = {{VB_W} \over {RB_W}}$          |
 | RB-W          | Float | River bank width                          |
 | VB-W          | Float | ValleyBottom Width                        |
 | min-RB-R      | Float | Minimum distance to the Right Riverbank   |
