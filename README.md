@@ -33,7 +33,7 @@ v. 1.1 (December 2023)
 
 [DOWNLOAD PDF schema](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.drawio.pdf)
 
-***Description***
+### Description
 
 The algorithm is used to calculate the relationship $ C_{Vi} $ between the *width* of the ValleyBottom $ VB_W $ and the *banks of a river* $ RB_W $.
 
@@ -43,7 +43,7 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 <img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1 -A.jpg" width="600">
 </p>
 
-***Input data required***
+### Input data
 
 | Parameter name    | Data Type     | Description                                                   |
 |-------------------|---------------|---------------------------------------------------------------|
@@ -59,6 +59,8 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 </p>
 
 Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated,  the minimum value is taken. 
+
+### Output
 
 In Output a ***Vector Points*** along the river axis containing the calculated data is generated with this field table:
 
@@ -76,7 +78,7 @@ In Output a ***Vector Points*** along the river axis containing the calculated d
 
 -----------------------
 
-## Riverbank Distance
+## Riverbanks Distance
 
 ### Description
 distance between banks and axis of a river along path; useful for morphological analysis.
@@ -96,6 +98,27 @@ Here how it works:
 9. Calculation of distances (Left and Right) using fields data
 10. Field cleaning and output.
 
+
+### Input data
+
+| Parameter name        | Data Type     | Description                                                   |
+|-----------------------|---------------|---------------------------------------------------------------|
+| Left Riverbank - RB-L | Linestring    | Left riverbank vector, must contain 1-line feature            |
+| Right Riverbank - RB-R| Linestring    | Right riverbank vector, must contain 1-line feature           |
+| River centerline      | Linestring    | Path of river                                                 |
+| SEZ-ID field lenght   | Boolean       | This parameter indicates the length of the SEZ-ID number field|
+| Step                  | Integer       | Distance in meters along river path from a node to another (*)|
+| Transects width       | Integer       | Width in meters used to generate transects (**)               |
+
+(*) A too short step increase computational resource needs and accuracy of data.
+A too long step decrease accuracy of the output parameters that describe morphology of the river
+
+(**) This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect riverbanks. It is used to generate transects orthogonal to the river simplified centerline
+
+### Output
+
+This model generate the Transects vector features along path of the river, and intersection nodes.
+For each transect in fields table there are Right and Left distance from centerline, useful to calculate riverbanks width.
 
 
 ## Disclaimer and credits
