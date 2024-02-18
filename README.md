@@ -62,7 +62,7 @@ Transects are generated, at constant distance from each other along the path, al
 
 ### Output
 
-In Output a ***Vector Points*** along the river axis containing the calculated data is generated with this field table:
+In Output a ***Vector Points*** along the river axis containing the calculated data is generated with this attribute table:
 
 | Filed name    | Data  |    Desription                             |
 |---------------|-------|-------------------------------------------|
@@ -72,13 +72,17 @@ In Output a ***Vector Points*** along the river axis containing the calculated d
 | VB-W          | Float | ValleyBottom Width                        |
 | min-RB-R      | Float | Minimum distance to the Right Riverbank   |
 | min-RB-L      | Float | Minimum distance to the Left Riverbank    |
-| min-VB-L      | Float | Minimum distancen to the Left ValleyBottom|
+| min-VB-L      | Float | Minimum distance to the Left ValleyBottom |
 | min-VB-R      | Float | Miminum distance to the Right ValleyBottom|
 | transect_d    | Float | Progressive distance along river path     |
 
 -----------------------
 
 ## Riverbanks Distance
+
+<p align="center">
+<img src="Models/RBD/images/RBD-example-C.png" width="400">
+</p>
 
 ### Description
 distance between banks and axis of a river along path; useful for morphological analysis.
@@ -93,9 +97,9 @@ Here how it works:
 4. Create transect across simplified river centerline
 5. Make a spatial-join with transects and nodes and assign the key-value "SEZ-ID" to transects
 6. Create nodes of intersection between Transects and Riverbanks (Left/Right)
-7. Add coordinates X/Y of intersection into fields table
-8. Spatial join of intersection nodes and Transects, and then assign fields
-9. Calculation of distances (Left and Right) using fields data
+7. Add coordinates X/Y of intersection into attribute table
+8. Spatial join of intersection nodes and Transects, and then assign attribute
+9. Calculation of distances (Left and Right) using attribute data
 10. Field cleaning and output.
 
 
@@ -106,7 +110,7 @@ Here how it works:
 | Left Riverbank - RB-L | Linestring    | Left riverbank vector, must contain 1-line feature            |
 | Right Riverbank - RB-R| Linestring    | Right riverbank vector, must contain 1-line feature           |
 | River centerline      | Linestring    | Path of river                                                 |
-| SEZ-ID field lenght   | Boolean       | This parameter indicates the length of the SEZ-ID number field|
+| SEZ-ID field lenght   | Boolean       | This parameter indicates the length of the SEZ-ID number attr.|
 | Step                  | Integer       | Distance in meters along river path from a node to another (*)|
 | Transects width       | Integer       | Width in meters used to generate transects (**)               |
 
@@ -117,9 +121,28 @@ A too long step decrease accuracy of the output parameters that describe morphol
 
 ### Output
 
-This model generate the Transects vector features along path of the river, and intersection nodes.
-For each transect in fields table there are Right and Left distance from centerline, useful to calculate riverbanks width.
+This model generate the ***Transects vector features*** along path of the river, and intersection nodes.
+For each transect in attribute table there are Right and Left distance from centerline, useful to calculate riverbanks width.
 
+| Filed name    | Data  |    Desription                             |
+|---------------|-------|-------------------------------------------|
+| SEZ-ID        | Int   | Transect identifier (key field)           |
+| min-RB-R      | Float | Minimum distance to the Right Riverbank   |
+| max-RB-R      | Float | Maximum distance to the Right Riverbank   |
+| min-RB-L      | Float | Minimum distance to the Left Riverbank    |
+| max-RB-L      | Float | Maxinum distance to the Left Riverbank    |
+
+`null` value distance is for no intersection between transects and RB
+
+<p align="center">
+<img src="Models/RBD/images/RBD-example-B-800px.png" width="600">
+</p>
+
+This image is an example of map output.
+linestring in red are the RB in input, the blue line is the river Centerline
+<p align="center">
+<img src="Models/RBD/images/RBD-example-A-800px.png" width="600">
+</p>
 
 ## Disclaimer and credits
 
