@@ -4,6 +4,9 @@
 
 A simple tools for analysis of Riverbanks in Qgis; algorytms and scripts are written with Qgis 3 graphical modeler and Python.
 
+Page views 
+<a href="https://www.freecounterstat.com" title="website hits counter"><img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am" border="0" title="website hits counter" alt="website hits counter"></a>
+
 ## Table of content
 1. [How to use on qgis](#how-to-use-on-qgis)
 2. [Confined Valley Index](#confined-valley-index)
@@ -16,7 +19,7 @@ A simple tools for analysis of Riverbanks in Qgis; algorytms and scripts are wri
 
 Download the specific model3 files in this repository:
 - [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3) (Qgis 3.28.11 Firenze or higher)
-- [Riverbanks Distance](Models/RBD/River%20Banks%20Distance%20v.1.3.model3) (Qgis 3.28.11 Firenze or higher)
+- [Riverbanks Distance](Models/RBD/River%20Banks%20Distance%20v.1.4.model3) (Qgis 3.28.11 Firenze or higher)
 
 NOTE: If you download file directly from GitHub webpage may assure that the extension of file must be .mopdel3 for properly use in Qgis
 
@@ -83,6 +86,10 @@ In Output a ***Vector Points*** along the river axis containing the calculated d
 <p align="center">
 <img src="Models/RBD/images/RBD-example-C.png" width="400">
 </p>
+
+
+--> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.model3) Qgis model3 file
+
 
 ### Description
 distance between banks and axis of a river along path; useful for morphological analysis.
