@@ -546,10 +546,10 @@ class ConfinedValleyIndex(QgsProcessingAlgorithm):
         return 'Confined Valley Index'
 
     def group(self):
-        return 'FSC'
+        return 'RBTools'
 
     def groupId(self):
-        return 'FSC'
+        return 'RBTools'
 
     def shortHelpString(self):
         return """<html><body><p><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
