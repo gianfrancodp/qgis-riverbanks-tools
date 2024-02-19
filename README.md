@@ -5,7 +5,7 @@
 A simple tools for analysis of Riverbanks in Qgis; algorytms and scripts are written with Qgis 3 graphical modeler and Python.
 
 Page views 
-<a href="https://www.freecounterstat.com" title="website hits counter"><img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am" border="0" title="website hits counter" alt="website hits counter"></a>
+<img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am" border="0" title="website hits counter" alt="website hits counter">
 
 ## Table of content
 1. [How to use on qgis](#how-to-use-on-qgis)
