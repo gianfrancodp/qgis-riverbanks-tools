@@ -195,7 +195,7 @@ The attribute table of Transects layer contain this data:
 | Filed name        | Type  |    Description                                        |
 |-------------------|-------|-------------------------------------------------------|
 | SEZ-ID            | Int   | Transect identifier (key field)                       |
-| T1-min-RB-R       | Float | Time 1 Minimum distance to the Right Bank: ${r}_{T1}  |
+| T1-min-RB-R       | Float | Time 1 Minimum distance to the Right Bank: ${r}_{T1}$ |
 | T1-max-RB-R       | Float | Time 1 Maximum distance to the Right Bank: ${R}_{T1}$ |
 | T1-min-RB-L       | Float | Time 1 Minimum distance to the Left Bank: ${l}_{T1}$  |
 | T1-max-RB-L       | Float | Time 1 Maxinum distance to the Left Bank: ${L}_{T1}$  |
@@ -203,8 +203,8 @@ The attribute table of Transects layer contain this data:
 | T2-max-RB-R       | Float | Time 2 Maximum distance to the Right Bank: ${R}_{T2}$ |
 | T2-min-RB-L       | Float | Time 2 Minimum distance to the Left Bank: ${l}_{T2}$  |
 | T2-max-RB-L       | Float | Time 2 Maxinum distance to the Left Bank: ${L}_{T1}$  |
-| T2-T1-min-delta-L | Float | $ \Delta_l = {l}_{T2} - {l}_{T1}$                      |
-| T2-T1-min-delta-R | Float | $ \Delta_r = {r}_{T2} - {r}_{T1}$                      |
+| T2-T1-min-delta-L | Float | $\Delta_l$ = ${l}_{T2} - {l}_{T1}$                    |
+| T2-T1-min-delta-R | Float | $\Delta_r$ = ${r}_{T2} - {r}_{T1}$                    |
 
 `null` value distance is for no intersection between transects and RB
 
