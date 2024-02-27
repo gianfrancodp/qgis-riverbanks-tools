@@ -5,7 +5,7 @@
 A simple tools for analysis of banks of a river in Qgis; algorytms and scripts are written with Qgis 3 graphical modeler and Python.
 
 Page views 
-<img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am" border="0" title="website hits counter" alt="website hits counter">
+<img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am">
 
 ## Table of content
 1. [How to use on qgis](#how-to-use-on-qgis)
@@ -203,8 +203,8 @@ The attribute table of Transects layer contain this data:
 | T2-max-RB-R       | Float | Time 2 Maximum distance to the Right Bank: ${R}_{T2}$ |
 | T2-min-RB-L       | Float | Time 2 Minimum distance to the Left Bank: ${l}_{T2}$  |
 | T2-max-RB-L       | Float | Time 2 Maxinum distance to the Left Bank: ${L}_{T1}$  |
-| T2-T1-min-delta-L | Float | $\Delta_l$ = ${l}_{T2}$ - ${l}_{T1}$                  |
-| T2-T1-min-delta-R | Float | $\Delta_r$ = ${r}_{T2}$ - ${r}_{T1}$                  |
+| T2-T1-min-delta-L | Float | $\Delta_l$ = ${l_{T2}}$ - ${l_{T1}}$                  |
+| T2-T1-min-delta-R | Float | $\Delta_r$ = ${r_{T2}}$ - ${r_{T1}}$                  |
 
 `null` value distance is for no intersection between transects and RB
 
