@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-02-27T11:08:49.422Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="im7mO0SIfcvY2JOVLRys" version="23.1.5" type="device">
+<mxfile host="Electron" modified="2024-02-27T11:44:05.888Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="vDHKfmJN8aODt2hLl8Mp" version="23.1.5" type="device">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="477" dy="337" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="413" pageHeight="291" math="0" shadow="0">
+    <mxGraphModel dx="763" dy="539" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="1" fold="1" page="1" pageScale="1" pageWidth="413" pageHeight="291" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -15,7 +15,7 @@
         <mxCell id="fCpWRSTJHVSK4sW-MZha-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="fCpWRSTJHVSK4sW-MZha-0" target="fCpWRSTJHVSK4sW-MZha-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="fCpWRSTJHVSK4sW-MZha-0" value="Point along path&lt;br&gt;(constant step)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="fCpWRSTJHVSK4sW-MZha-0" value="Lines intersections" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="82" y="124" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="fCpWRSTJHVSK4sW-MZha-1" value="Difference evaluation" style="whiteSpace=wrap;html=1;rounded=1;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -311,8 +311,8 @@
             <mxPoint x="28" y="6" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HR6z3A-rT7DozFi2OHON-71" value="&lt;font face=&quot;Garamond&quot;&gt;Δ&lt;/font&gt;&lt;sub&gt;&lt;font style=&quot;font-size: 7px;&quot;&gt;R t1-t2&lt;/font&gt;&lt;/sub&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="301" y="196" width="38" height="19" as="geometry" />
+        <mxCell id="HR6z3A-rT7DozFi2OHON-71" value="&lt;font face=&quot;Garamond&quot;&gt;Δ&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="292" y="193" width="38" height="19" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
