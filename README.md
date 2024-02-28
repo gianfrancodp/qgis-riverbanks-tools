@@ -41,7 +41,7 @@ v. 1.1 (December 2023)
 
 ### Description
 
-The algorithm is used to calculate the relationship $ C_{Vi} $ between the *width* of the ValleyBottom $ VB_W $ and the *banks of a river* $ RB_W $.
+The algorithm is used to calculate the relationship $C_{Vi}$ between the *width* of the ValleyBottom $VB_W$ and the *banks of a river* $RB_W$.
 
 $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
