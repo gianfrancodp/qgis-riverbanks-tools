@@ -79,8 +79,15 @@ In Output a ***Vector Points*** along the river axis containing the calculated d
 | min-RB-R      | Float | Minimum distance to the Right bank        |
 | min-RB-L      | Float | Minimum distance to the Left bank         |
 | min-VB-L      | Float | Minimum distance to the Left ValleyBottom |
-| min-VB-R      | Float | Miminum distance to the Right ValleyBottom|
+| min-VB-R      | Float | Mimimum distance to the Right ValleyBottom|
 | transect_d    | Float | Progressive distance along river path     |
+
+An example of the results is shown in this map. A scaled-type symbology was used using the **VB_RB-index** field that represent the CVI. Higher values indicate that the valley bottom is further from the river banks. Therefore, in these portions the river is not confined by resistant elements.
+
+<p align="center">
+<img src="Models/CVI/CVI%20-%20output%20example.png" width="600">
+</p>
+
 
 -----------------------
 
