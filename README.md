@@ -1,17 +1,17 @@
-<p align="center">
-<img src="Models/other_data/QRT_main_image.png">
-</p>
+# Qgis riberbanks tools
+
+![header](Models/other_data/QRT_main_image.png)
 
 A simple tools for analysis of banks of a river in Qgis; algorytms and scripts are written with Qgis 3 graphical modeler and Python.
 
-Page views 
-<img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am">
+Page views <img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am">
 
 ## Table of content
+
 1. [How to use on qgis](#how-to-use-on-qgis)
 2. [Confined Valley Index](#confined-valley-index)
-3. [Riverbanks Distance](#riverbanks-distance)
-4. [Riverbanks Distance Comparison](#riverbanks-distance-comparison)
+3. [Riverbanks Distance](#riverbanks-distance-rbd)
+4. [Riverbanks Distance Comparison](#riverbanks-distance-comparison-rbdc)
 5. [Disclaimer and Credits](#disclaimer-and-credits)
 
 -----------
@@ -20,6 +20,7 @@ Page views
 
 Download the specific model3 files in this repository:
 all model3 files are running on Qgis 3.28.11 or higher
+
 - [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3)
 - [Riverbanks Distance](Models/RBD/River%20Banks%20Distance%20v.1.4.model3)
 - [River Banks Distance Comparison](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3)
@@ -30,11 +31,10 @@ NOTE: If you download file directly from GitHub webpage may assure that the exte
 2. Go to Processing sidebar and go to Model icon menu
 3. Click on "Open existing model" and select the file in your filesystem
 
--------------
-
-
+-----------
 
 ## Confined Valley Index
+
 v. 1.1 (December 2023)
 
 [DOWNLOAD PDF schema](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.drawio.pdf)
@@ -45,9 +45,7 @@ The algorithm is used to calculate the relationship $C_{Vi}$ between the *width*
 
 $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
-<p align="center">
-<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1 -A.jpg" width="600">
-</p>
+![CVIdiagram](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1-A.jpg)
 
 ### Input data
 
@@ -60,9 +58,7 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 | Transects WIDTH   | Integer       | Lenght in meters of transects across river path               |
 | Valley Bottom     | Polygon       | Polygon features that define the Valley Bottom of the river   |
 
-<p align="center">
-<img src="Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg" width="500"/>
-</p>
+![CVI-index-B](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg)
 
 Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated,  the minimum value is taken. 
 
@@ -84,24 +80,18 @@ In Output a ***Vector Points*** along the river axis containing the calculated d
 
 An example of the results is shown in this map. A scaled-type symbology was used using the **VB_RB-index** field that represent the CVI. Higher values indicate that the valley bottom is further from the river banks. Therefore, in these portions the river is not confined by resistant elements.
 
-<p align="center">
-<img src="Models/CVI/CVI%20-%20output%20example.png" width="600">
-</p>
+![CVI-example](Models/CVI/CVI%20-%20output%20example.png)
 
+-----------
 
------------------------
+## RiverBanks Distance RBD
 
-## Riverbanks Distance
-
-<p align="center">
-<img src="Models/RBD/images/RBD-example-C.png" width="400">
-</p>
-
+![RDB-example-C](Models/RBD/images/RBD-example-C.png)
 
 --> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.model3) Qgis model3 file
 
+### RBD Description
 
-### Description
 distance between banks and axis of a river along path; useful for morphological analysis.
 
 Centerline of the river is simplyfied into fixed-lenght segments,  for each step along the path this model get the distance between centerline and left/right banks.
@@ -119,8 +109,7 @@ Here how it works:
 9. Calculation of distances (Left and Right) using attribute data
 10. Field cleaning and output.
 
-
-### Input data
+### RBD Input data
 
 | Parameter name        | Type          | Description                                                   |
 |-----------------------|---------------|---------------------------------------------------------------|
@@ -135,7 +124,7 @@ A too long step decrease accuracy of the output parameters that describe morphol
 
 (**) This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect banks. It is used to generate transects orthogonal to the river simplified centerline
 
-### Output
+### RBD Output
 
 This model generate the ***Transects vector features*** along path of the river, and intersection nodes.
 For each transect in attribute table there are Right and Left distance from centerline, useful to calculate banks width.
@@ -150,28 +139,22 @@ For each transect in attribute table there are Right and Left distance from cent
 
 `null` value distance is for no intersection between transects and RB
 
-<p align="center">
-<img src="Models/RBD/images/RBD-example-B-800px.png" width="600">
-</p>
+![RBD Example B](Models/RBD/images/RBD-example-B-800px.png)
 
 This image is an example of map output.
 linestring in red are the RB in input, the blue line is the river Centerline
-<p align="center">
-<img src="Models/RBD/images/RBD-example-A-800px.png" width="600">
-</p>
 
-## Riverbanks Distance Comparison
+![RBD Example A](Models/RBD/images/RBD-example-A-800px.png)
 
-<p align="center">
-<img src="Models/RBDC/images/RBDC-A-400px.png" width="400">
-</p>
+## Riverbanks Distance Comparison RBDC
 
+![Riverbanks Distance Comparison](Models/RBDC/images/RBDC-A-400px.png)
 
 --> [Download](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3) model3 file 
 
 The bank distance comparison model (RBDC) is an implementation of RBD with two banks, which is useful in historical comparison analysis or quantitative analysis of the width of river banks in two epochs.
 
-### Input data
+### RBDC Input data
 
 | Parameter name                    | Type          | Description                                                   |
 |-----------------------------------|---------------|---------------------------------------------------------------|
@@ -189,11 +172,12 @@ A too long step decrease accuracy of the output parameters that describe morphol
 
 (**) This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect banks. It is used to generate transects orthogonal to the river simplified centerline
 
-### Output
+### RBDC Output
 
 This model generate 2 layers:
-1) a **line** layer called: "_T1-T2 Transects RB distance comparison_"
-2) a **point** layer called: "_Interseciton nodes_"
+
+1) a **line** layer called: "*T1-T2 Transects RB distance comparison*"
+2) a **point** layer called: "*Interseciton nodes*"
 
 Transects layer contain data about bank distance and their comparison, point layer contain only point of intersection between banks and transects.
 
@@ -217,17 +201,11 @@ The attribute table of Transects layer contain this data:
 
 This is an example of results in attribute table
 
-<p align="center">
-<img src="Models/RBDC/images/RBDC-B-800px.png">
-</p>
-
+![RBDC Example B](Models/RBDC/images/RBDC-B-800px.png)
 
 This is an example of results in maps
 
-<p align="center">
-<img src="Models/RBDC/images/RBDC-C.png" width="400">
-</p>
-
+![RBDC Example C](Models/RBDC/images/RBDC-C.png)
 
 ## Disclaimer and credits
 
