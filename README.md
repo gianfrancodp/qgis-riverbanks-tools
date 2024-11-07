@@ -4,7 +4,22 @@
 
 A simple tools for analysis of banks of a river in Qgis; algorytms and scripts are written with Qgis 3 graphical modeler and Python.
 
-Page views <img src="https://counter8.optistats.ovh/private/freecounterstat.php?c=uwn9jtcrld4rhsk7bl2nt7211waym2am">
+## NEWS
+
+(Nov, 7 2024)
+
+1. A *new beta-version* of River Banks Distance Comparison is released, try it: [Download RBDC beta v.1.4.1](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.1.model3) model3 file. In this beta will be added new features:
+
+    - Time value inputs of the two riverbanks to compare
+    - Year erosion rate computing for each transect
+
+2. A new model3 called *River Banks Stretch* is released, try it: [Download RCS v.1.0-beta](Models/RCS/RB%20Stretch_v.1.0-beta.model3).
+
+    - This model separate RiverBanks (RB) into single stretches using the stretches of the River Centerline (RC) vector. New elements will inherit the field table values from RC.
+
+Please send us your feedbak! open a issue [here on Github](https://github.com/gianfrancodp/qgis-riverbanks-tools/issues) or send an email to [authors](#authors).
+
+---
 
 ## Table of content
 
@@ -24,6 +39,7 @@ all model3 files are running on Qgis 3.28.11 or higher
 - [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3)
 - [Riverbanks Distance](Models/RBD/River%20Banks%20Distance%20v.1.4.model3)
 - [River Banks Distance Comparison](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3)
+
 
 NOTE: If you download file directly from GitHub webpage may assure that the extension of file must be .mopdel3 for properly use in Qgis
 
@@ -150,7 +166,10 @@ linestring in red are the RB in input, the blue line is the river Centerline
 
 ![Riverbanks Distance Comparison](Models/RBDC/images/RBDC-A-400px.png)
 
---> [Download](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3) model3 file 
+--> [Download](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3) v.1.4 model3 file
+
+*Try a new beta-version*: [Download beta v.1.4.1](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.1.model3) model3 file
+
 
 The bank distance comparison model (RBDC) is an implementation of RBD with two banks, which is useful in historical comparison analysis or quantitative analysis of the width of river banks in two epochs.
 
@@ -213,7 +232,7 @@ This repository contains algorithms that for calculating and analyzing some hydr
 
 The work was developed within my research at the University of Catania as Phd student, specific through a Scientific collaboration agreement between the Basin Authority of the Hydrographic District of Sicily [(AdB Sicilia)](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/contatti-dipartimento-autorita-bacino-adb) and the Department of Civil Engineering and Architecture [(DICaR)](https://www.dicar.unict.it) of the University of Catania, for hydrological and hydraulic studies for the identification of river belts, for the identification of NWRM (Natural Water Retention Measures), and for the definition of lamination plans of the rivers.
 
-### List of contributors
+### Authors
 
 - [Gianfranco Di Pietro](https://gianfrancodp.github.io), *PhD student at Università di Catania*
 - [Rosaria Ester Musumeci](https://www.dicar.unict.it/faculty/rosaria.ester.musumeci), *Associate professor of Hydraulics - Università di Catania*
