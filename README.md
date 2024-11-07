@@ -13,7 +13,7 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
     - Time value inputs of the two riverbanks to compare
     - Year erosion rate computing for each transect
 
-2. A new model3 called *River Banks Stretch* is released, try it: [Download RCS v.1.0-beta](Models/RCS/RB%20Stretch_v.1.0-beta.model3).
+2. A new model3 called *River Banks Stretch* is released, try it: [Download RBS v.1.0-beta](Models/RCS/RB%20Stretch_v.1.0-beta.model3).
 
     - This model separate RiverBanks (RB) into single stretches using the stretches of the River Centerline (RC) vector. New elements will inherit the field table values from RC.
 
