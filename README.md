@@ -1,4 +1,4 @@
-# Qgis riberbanks tools
+# Qgis riverbanks tools
 
 ![header](Models/other_data/QRT_main_image.png)
 
