@@ -10,7 +10,7 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
 
 1. Renamed RBS model in *River Banks Segments Cutter*. [DOWNLOAD & test in your QGIS!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3): This model separate RiverBanks (RB) into single segments using the stretches of the River Centerline (RC) vector. New elements will inherit the field table values from RC. <- Please refer to **built-in user guide**!
 
-2. A *new* model3 called: *River Banks Safety Bands Tool*. This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into hydrologically homogeneous segments. For each segment, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate. [DOWNLOAD & test in your QGIS!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3) <- Please refer to **built-in user guide**!
+2. A *new* model3 called: *River Banks Safety Bands Tool*. This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into hydrologically homogeneous segments. For each segment, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate. [DOWNLOAD & test in your QGIS!](Models/RBSB/RB%20Safety%20Bands%20tool.model3) <- Please refer to **built-in user guide**!
 
 (Nov, 7 - 2024)
 
@@ -33,9 +33,9 @@ Please send us your feedbak! open a issue [here on Github](https://github.com/gi
 2. [Confined Valley Index](#confined-valley-index)
 3. [Riverbanks Distance](#riverbanks-distance-rbd)
 4. [Riverbanks Distance Comparison](#riverbanks-distance-comparison-rbdc)
-5. [Disclaimer and Credits](#disclaimer-and-credits)
-
------------
+5. [RiverBanks Segments Cutter](#riverbanks-segment-cutter)
+6. [RiverBanks Safety Bands tool](#riverbanks-safety-bands-tool)
+7. [Disclaimer and Credits](#disclaimer-and-credits)
 
 ## How to use on Qgis
 
@@ -45,15 +45,14 @@ all model3 files are running on Qgis 3.28.11 or higher
 - [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3)
 - [Riverbanks Distance](Models/RBD/River%20Banks%20Distance%20v.1.4.model3)
 - [River Banks Distance Comparison](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3)
-
+- [RiverBanks Segments Cutter](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
+- [RiverBanks Safety Bands tool](Models/RBSB/RB%20Safety%20Bands%20tool.model3)
 
 NOTE: If you download file directly from GitHub webpage may assure that the extension of file must be .mopdel3 for properly use in Qgis
 
 1. Open Qgis (developed and testet with Qgis 3.28.11)
 2. Go to Processing sidebar and go to Model icon menu
 3. Click on "Open existing model" and select the file in your filesystem
-
------------
 
 ## Confined Valley Index
 
@@ -231,6 +230,56 @@ This is an example of results in attribute table
 This is an example of results in maps
 
 ![RBDC Example C](Models/RBDC/images/RBDC-C.png)
+
+## RiverBanks Segment Cutter
+
+This model algorytm separate RiverBanks (RB) into single segments using the stretches of the River Centerline (RC) vector.
+New elements will inherit the field table values from RC.
+
+### RBSC Input data
+
+NOTE: this model is tested with a single-feature vector for inputs
+
+- LBR: Line or multiline feature with Left riverbank to consider.
+- RBR: Line or multiline feature with Right riverbank to consider.
+- RC stretch: Line or multiline feature with River Centerline to consider.
+- River stretch separation lines: This vector contain only geometries used to cut RB. NONE of the field values of this vector will be inherited in the outputs.
+
+### RBSC Procedure description
+
+1. Cut RB with separation lines vector
+2. Get the max lenght of separation lines feature
+3. Use *"proximity"* join (with a threshold distance provided from step #2) to inherit field table values from RC to RB
+
+### RBSC Output data
+
+- LRB: Left RiverBank segments
+- RRB: Right RiverBank segments
+
+## RiverBanks Safety Bands Tool
+
+This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into hydrologically homogeneous segments. For each segment, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate.
+![Models/RBSB/RBSB_example.png](Models/RBSB/RBSB_example.png)
+
+### RBSBT Input data
+
+- *LEFT side RiverBank*: Vector that contain the LEFT side of Riverbank segments. This vector must contain at least a field with the year erosion rate to be used in calculus
+- *Left Erosion Rate field*: Name of the field with values of Erosion Rate
+- *RIGHT side riverBank*: Vector that contain the RIGHT side of Riverbank segments. This vector must contain at least a field with the year erosion rate to be used in calculus
+- *Right Erosion Rate field*:  Name of the field with values of Erosion Rate
+- *M factor for buffers*: the multiplicative factor of the erosion rate used to determine the buffer distance from riverbanks
+
+### RBSBT Procedure description
+
+1. Create single-side buffer for each of RB usin the formula: $$ D = {{E_r} \cdot {M}} $$
+2. Union geoprocess to merge the two buffer into one feature
+3. Dissolve all feature and hole fitting for purify geometric data
+4. Convert polygon to lines to get output
+
+### RBSBT Output data
+
+- *Offset line*: a MultiLine vector with Bands limit.
+
 
 ## Disclaimer and credits
 
