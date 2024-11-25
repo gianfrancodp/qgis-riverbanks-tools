@@ -8,20 +8,20 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
 
 (Nov, 25 - 2024)
 
-1. Renamed RBS model in *River Banks Segments Cutter*. [DOWNLOAD & test!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
+1. Renamed RBS model in *River Banks Segments Cutter*. [DOWNLOAD & test in your QGIS!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3): This model separate RiverBanks (RB) into single segments using the stretches of the River Centerline (RC) vector. New elements will inherit the field table values from RC. <- Please refer to **built-in user guide**!
 
-2. A *new* model3 called: *River Banks Safety Bands Tool*. This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into hydrologically homogeneous segments. For each segment, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate. [DOWNLOAD & test!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3) <- Please refer to built-in user guide!
+2. A *new* model3 called: *River Banks Safety Bands Tool*. This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into hydrologically homogeneous segments. For each segment, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate. [DOWNLOAD & test in your QGIS!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3) <- Please refer to **built-in user guide**!
 
 (Nov, 7 - 2024)
 
-1. A *new beta-version* of River Banks Distance Comparison is released, try it: [Download RBDC beta v.1.4.1](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.1.model3) model3 file. In this beta will be added new features:
+1. A *new beta-version* of River Banks Distance Comparison is released, try it: [DOWNLOAD & test in your QGIS!](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.1.model3) model3 file. In this beta will be added new features:
 
     - Time value inputs of the two riverbanks to compare
     - Year erosion rate computing for each transect
 
-2. A new model3 called *River Banks Stretch* is released, try it: [Download RBS v.1.0-beta](Models/RCS/RB%20Stretch_v.1.0-beta.model3).
+    Please refer to **built-in user guide**!
 
-    - This model separate RiverBanks (RB) into single stretches using the stretches of the River Centerline (RC) vector. New elements will inherit the field table values from RC.
+2. (hidden due last update)
 
 Please send us your feedbak! open a issue [here on Github](https://github.com/gianfrancodp/qgis-riverbanks-tools/issues) or send an email to [authors](#authors).
 
