@@ -6,7 +6,13 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
 
 ## NEWS
 
-(Nov, 7 2024)
+(Nov, 25 - 2024)
+
+1. Renamed RBS model in *River Banks Segments Cutter*. [DOWNLOAD & test!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
+
+2. A *new* model3 called: *River Banks Safety Bands Tool*. This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into hydrologically homogeneous segments. For each segment, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate. [DOWNLOAD & test!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3) <- Please refer to built-in user guide!
+
+(Nov, 7 - 2024)
 
 1. A *new beta-version* of River Banks Distance Comparison is released, try it: [Download RBDC beta v.1.4.1](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.1.model3) model3 file. In this beta will be added new features:
 
