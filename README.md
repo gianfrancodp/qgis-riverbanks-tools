@@ -48,7 +48,7 @@ all model3 files are running on Qgis 3.28.11 or higher
 - [RiverBanks Segments Cutter](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
 - [RiverBanks Safety Bands tool](Models/RBSB/RB%20Safety%20Bands%20tool.model3)
 
-NOTE: If you download file directly from GitHub webpage may assure that the extension of file must be .mopdel3 for properly use in Qgis
+NOTE: If you download file directly from GitHub webpage may assure that the extension of file must be .model3 for properly use in Qgis
 
 1. Open Qgis (developed and testet with Qgis 3.28.11)
 2. Go to Processing sidebar and go to Model icon menu
