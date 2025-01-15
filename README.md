@@ -290,6 +290,7 @@ The work was developed within my research at the University of Catania as Phd st
 ### Authors
 
 - [Gianfranco Di Pietro](https://gianfrancodp.github.io), *PhD student at Università di Catania*
-- [Rosaria Ester Musumeci](https://www.dicar.unict.it/faculty/rosaria.ester.musumeci), *Associate professor of Hydraulics - Università di Catania*
-- Valeria Pennisi, *Researcher at Università di Catania*
 - Martina Stagnitti, *Researcer at Università di Catania*
+- Valeria Pennisi, *Researcher at Università di Catania*
+- [Rosaria Ester Musumeci](https://www.dicar.unict.it/faculty/rosaria.ester.musumeci), *Associate professor of Hydraulics - University of Catania*
+- [Enrico Foti](https://www.dicar.unict.it/faculty/enrico.foti), *Full Professor of Hydraulics - University of Catania*
