@@ -236,8 +236,9 @@ This is an example of results in maps
 
 ## RiverBanks Segment Cutter
 
-This model algorytm separate RiverBanks (RB) into single segments using the stretches of the River Centerline (RC) vector.
-New elements will inherit the field table values from RC.
+This model algorithm segments the RiverBanks (RB) layer into individual units by leveraging the corresponding stretches of the River Centerline (RC) vector. Each resulting unit inherits attribute values from the RC layer, ensuring consistency across datasets. The output delineates distinct reaches of the water body, facilitating detailed hydromorphological analyses and management planning.​
+
+
 
 ### RBSC Input data
 
@@ -256,8 +257,8 @@ NOTE: this model is tested with a single-feature vector for inputs
 
 ### RBSC Output data
 
-- LRB: Left RiverBank segments
-- RRB: Right RiverBank segments
+- LRB: Left RiverBank reaches
+- RRB: Right RiverBank reaches
 
 ## RiverBanks Safety Bands Tool
 
