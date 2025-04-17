@@ -19,6 +19,8 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
 
 ## NEWS
 
+(Apr, 17 - 2025): Minor update of documentation
+
 (Nov, 25 - 2024)
 
 1. Renamed RBS model in *River Banks Segments Cutter*. [DOWNLOAD & test in your QGIS!](Models/RBSC/River%20Banks%20Segments%20Cutter.model3): This model separate RiverBanks (RB) into single segments using the stretches of the River Centerline (RC) vector. New elements will inherit the field table values from RC. <- Please refer to **built-in user guide**!
