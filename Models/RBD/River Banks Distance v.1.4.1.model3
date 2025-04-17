@@ -1,0 +1,1357 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="native:fieldcalculator_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:fieldcalculator" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Assign a key-value for each nodes called &quot;SEZ-ID&quot;&#xa;If Revert path direction is set to TRUE order is reverted" type="QString" name="component_description"/>
+        <Option value="116.00000000000001" type="double" name="component_height"/>
+        <Option value="1491" type="double" name="component_pos_x"/>
+        <Option value="576" type="double" name="component_pos_y"/>
+        <Option value="149.99999999999997" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Assign SEZ-ID" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="1265" type="double" name="component_pos_x"/>
+      <Option value="520" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:fieldcalculator_1" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="false" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELD_LENGTH">
+          <Option type="Map">
+            <Option value="sezid_field_lenght" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_NAME">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="SEZ-ID" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_PRECISION">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="0" type="int" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_TYPE">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="1" type="int" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FORMULA">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="if(@revertpathdirection is FALSE, @id, (count( 'Centerline-nodes')-@id+1))" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:pointsalonglines_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:joinattributestable_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:joinattributestable" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="2081" type="double" name="component_pos_x"/>
+        <Option value="1462" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="JOIN Transects - Intersection - Right" type="QString" name="component_description"/>
+      <Option value="37.17242626655525" type="double" name="component_height"/>
+      <Option value="1957.2154726464353" type="double" name="component_pos_x"/>
+      <Option value="1467.0017838312408" type="double" name="component_pos_y"/>
+      <Option value="216.13795909974897" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:joinattributestable_1" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DISCARD_NONMATCHING">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="true" type="bool" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="SEZ-ID" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELDS_TO_COPY">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="StringList" name="static_value">
+              <Option value="" type="QString"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_2">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="SEZ-ID" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:joinbynearest_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_2">
+          <Option type="Map">
+            <Option value="native:refactorfields_2" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="METHOD">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="1" type="int" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="PREFIX">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="R-" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:joinattributestable_2">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:joinattributestable" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Final vector that contain transects feature and field from their intersection with banks.&#xa;Fields table will be cleaned and will be generated output data." type="QString" name="component_description"/>
+        <Option value="76.63426302949347" type="double" name="component_height"/>
+        <Option value="1535.0668178140465" type="double" name="component_pos_x"/>
+        <Option value="1636.1986356715056" type="double" name="component_pos_y"/>
+        <Option value="166.53705211797342" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="JOIN Transects - Intersection - Left" type="QString" name="component_description"/>
+      <Option value="42.09764583963147" type="double" name="component_height"/>
+      <Option value="1735.322486289369" type="double" name="component_pos_x"/>
+      <Option value="1627.7736304928994" type="double" name="component_pos_y"/>
+      <Option value="203.02441145990792" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:joinattributestable_2" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DISCARD_NONMATCHING">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="false" type="bool" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="SEZ-ID" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELDS_TO_COPY">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="StringList" name="static_value">
+              <Option value="" type="QString"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_2">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="SEZ-ID" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:joinattributestable_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_2">
+          <Option type="Map">
+            <Option value="native:refactorfields_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="METHOD">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="1" type="int" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="PREFIX">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="L-" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:joinbynearest_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:joinbynearest" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="1685" type="double" name="component_pos_x"/>
+        <Option value="1097" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Assign SEZ-ID to Transects" type="QString" name="component_description"/>
+      <Option value="43.89710354129488" type="double" name="component_height"/>
+      <Option value="971" type="double" name="component_pos_x"/>
+      <Option value="925.9485517706474" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:joinbynearest_1" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DISCARD_NONMATCHING">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="true" type="bool" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELDS_TO_COPY">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="StringList" name="static_value">
+              <Option value="SEZ-ID" type="QString"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:transect_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_2">
+          <Option type="Map">
+            <Option value="native:fieldcalculator_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="MAX_DISTANCE">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="invalid" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEIGHBORS">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="1" type="int" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="PREFIX">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:lineintersections_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:lineintersections" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Create nodes on intersection between transects and Right riverbanks" type="QString" name="component_description"/>
+        <Option value="50" type="double" name="component_height"/>
+        <Option value="1356.300440111287" type="double" name="component_pos_x"/>
+        <Option value="1158.041988036176" type="double" name="component_pos_y"/>
+        <Option value="158" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Nodes_INT_R" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="1141" type="double" name="component_pos_x"/>
+      <Option value="1207" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:lineintersections_1" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:joinbynearest_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_FIELDS">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="StringList" name="static_value">
+              <Option value="" type="QString"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INTERSECT">
+          <Option type="Map">
+            <Option value="right_riverbank__rbr" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INTERSECT_FIELDS">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="StringList" name="static_value">
+              <Option value="" type="QString"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INTERSECT_FIELDS_PREFIX">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:lineintersections_2">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:lineintersections" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Create nodes on intersection between transects and Left riverbanks" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="613.1853450537717" type="double" name="component_pos_x"/>
+        <Option value="1204.2445080454481" type="double" name="component_pos_y"/>
+        <Option value="152" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Nodes_INT_L" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="872" type="double" name="component_pos_x"/>
+      <Option value="1207" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:lineintersections_2" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:joinbynearest_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_FIELDS">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="StringList" name="static_value">
+              <Option value="" type="QString"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INTERSECT">
+          <Option type="Map">
+            <Option value="left_riverbank__rbl" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INTERSECT_FIELDS">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="StringList" name="static_value">
+              <Option value="" type="QString"/>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INTERSECT_FIELDS_PREFIX">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:pointsalonglines_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:pointsalonglines" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Create nodes along river centerline path,  using the input &quot;step&quot;" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="414.0904386921245" type="double" name="component_pos_x"/>
+        <Option value="451" type="double" name="component_pos_y"/>
+        <Option value="141.81912261575093" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Centerline-nodes" type="QString" name="component_description"/>
+      <Option value="38" type="double" name="component_height"/>
+      <Option value="670" type="double" name="component_pos_x"/>
+      <Option value="456" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:pointsalonglines_1" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DISTANCE">
+          <Option type="Map">
+            <Option value="step" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="END_OFFSET">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="0" type="double" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="river_centerline" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="START_OFFSET">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="0" type="double" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:pointstopath_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:pointstopath" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Create a new simplified river centerline using centerline nodes" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="460" type="double" name="component_pos_x"/>
+        <Option value="572" type="double" name="component_pos_y"/>
+        <Option value="208" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Simplified-centerline" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="733" type="double" name="component_pos_x"/>
+      <Option value="564" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:pointstopath_1" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="CLOSE_PATH">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="false" type="bool" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="GROUP_EXPRESSION">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:pointsalonglines_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NATURAL_SORT">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="false" type="bool" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="ORDER_EXPRESSION">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="" type="QString" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:refactorfields_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:refactorfields" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="3066.3585583705512" type="double" name="component_pos_x"/>
+        <Option value="2246.1112109344226" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Left Nodes attributes" type="QString" name="component_description"/>
+      <Option value="36.70520711974018" type="double" name="component_height"/>
+      <Option value="1311.3826421974875" type="double" name="component_pos_x"/>
+      <Option value="1406.9953155460535" type="double" name="component_pos_y"/>
+      <Option value="262.8909155691704" type="double" name="component_width"/>
+      <Option type="List" name="dependencies">
+        <Option type="Map">
+          <Option value="native:lineintersections_2" type="QString" name="child_id"/>
+          <Option value="" type="QString" name="conditional_branch"/>
+        </Option>
+      </Option>
+      <Option value="native:refactorfields_1" type="QString" name="id"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="Left nodes">
+          <Option value="native:refactorfields_1" type="QString" name="child_id"/>
+          <Option value="" type="QString" name="color"/>
+          <Option type="Map" name="comment">
+            <Option value="" type="QString" name="color"/>
+            <Option value="" type="QString" name="component_description"/>
+            <Option value="60" type="double" name="component_height"/>
+            <Option value="0" type="double" name="component_pos_x"/>
+            <Option value="0" type="double" name="component_pos_y"/>
+            <Option value="100" type="double" name="component_width"/>
+            <Option value="true" type="bool" name="outputs_collapsed"/>
+            <Option value="true" type="bool" name="parameters_collapsed"/>
+          </Option>
+          <Option value="Left nodes" type="QString" name="component_description"/>
+          <Option value="30" type="double" name="component_height"/>
+          <Option value="0" type="double" name="component_pos_x"/>
+          <Option value="0" type="double" name="component_pos_y"/>
+          <Option value="200" type="double" name="component_width"/>
+          <Option type="invalid" name="default_value"/>
+          <Option value="false" type="bool" name="mandatory"/>
+          <Option value="Left nodes" type="QString" name="name"/>
+          <Option value="OUTPUT" type="QString" name="output_name"/>
+          <Option value="true" type="bool" name="outputs_collapsed"/>
+          <Option value="true" type="bool" name="parameters_collapsed"/>
+        </Option>
+      </Option>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELDS_MAPPING">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="List" name="static_value">
+              <Option type="Map">
+                <Option value="&quot;SEZ-ID&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="SEZ-ID" type="QString" name="name"/>
+                <Option value="0" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="2" type="int" name="type"/>
+                <Option value="integer" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;feature_x&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="feature_x" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;feature_y&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="feature_y" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="$x" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="X_INT_L" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="$y" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="Y_INT_L" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="sqrt(( $x - &quot;feature_x&quot;)^2 + ( $y - &quot;feature_y&quot;)^2)" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="dist-L" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="minimum( (sqrt(( $x - &quot;feature_x&quot;)^2 + ( $y - &quot;feature_y&quot;)^2)),&quot;SEZ-ID&quot;,&quot;SEZ-ID&quot;)" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="min-dist-L" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="maximum( (sqrt(( $x - &quot;feature_x&quot;)^2 + ( $y - &quot;feature_y&quot;)^2)),&quot;SEZ-ID&quot;,&quot;SEZ-ID&quot;)" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="max-dist-L" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:lineintersections_2" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:refactorfields_2">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:refactorfields" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="1680.2721669114044" type="double" name="component_pos_x"/>
+        <Option value="965.1347057367364" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Right nodes attributes" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="1667.1942900290433" type="double" name="component_pos_x"/>
+      <Option value="1206.2877040635267" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:refactorfields_2" type="QString" name="id"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="Right nodes">
+          <Option value="native:refactorfields_2" type="QString" name="child_id"/>
+          <Option value="" type="QString" name="color"/>
+          <Option type="Map" name="comment">
+            <Option value="" type="QString" name="color"/>
+            <Option value="" type="QString" name="component_description"/>
+            <Option value="60" type="double" name="component_height"/>
+            <Option value="0" type="double" name="component_pos_x"/>
+            <Option value="0" type="double" name="component_pos_y"/>
+            <Option value="100" type="double" name="component_width"/>
+            <Option value="true" type="bool" name="outputs_collapsed"/>
+            <Option value="true" type="bool" name="parameters_collapsed"/>
+          </Option>
+          <Option value="Right nodes" type="QString" name="component_description"/>
+          <Option value="30" type="double" name="component_height"/>
+          <Option value="0" type="double" name="component_pos_x"/>
+          <Option value="0" type="double" name="component_pos_y"/>
+          <Option value="200" type="double" name="component_width"/>
+          <Option type="invalid" name="default_value"/>
+          <Option value="false" type="bool" name="mandatory"/>
+          <Option value="Right nodes" type="QString" name="name"/>
+          <Option value="OUTPUT" type="QString" name="output_name"/>
+          <Option value="true" type="bool" name="outputs_collapsed"/>
+          <Option value="true" type="bool" name="parameters_collapsed"/>
+        </Option>
+      </Option>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELDS_MAPPING">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="List" name="static_value">
+              <Option type="Map">
+                <Option value="&quot;SEZ-ID&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="SEZ-ID" type="QString" name="name"/>
+                <Option value="0" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="2" type="int" name="type"/>
+                <Option value="integer" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;feature_x&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="feature_x" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;feature_y&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="feature_y" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="$x" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="X_INT_R" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="$y" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="Y_INT_R" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="sqrt(( $x - &quot;feature_x&quot;)^2 + ( $y - &quot;feature_y&quot;)^2)" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="dist-R" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="minimum( (sqrt(( $x - &quot;feature_x&quot;)^2 + ( $y - &quot;feature_y&quot;)^2)),&quot;SEZ-ID&quot;,&quot;SEZ-ID&quot;)" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="min-dist-R" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="maximum( (sqrt(( $x - &quot;feature_x&quot;)^2 + ( $y - &quot;feature_y&quot;)^2)),&quot;SEZ-ID&quot;,&quot;SEZ-ID&quot;)" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="max-dist-R" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:lineintersections_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:refactorfields_3">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:refactorfields" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="1952.6464410166197" type="double" name="component_pos_x"/>
+        <Option value="1813.5008421133957" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Output" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="1825.6273020110987" type="double" name="component_pos_x"/>
+      <Option value="1742.5900628868706" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:refactorfields_3" type="QString" name="id"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="Output transects">
+          <Option value="native:refactorfields_3" type="QString" name="child_id"/>
+          <Option value="" type="QString" name="color"/>
+          <Option type="Map" name="comment">
+            <Option value="" type="QString" name="color"/>
+            <Option value="" type="QString" name="component_description"/>
+            <Option value="60" type="double" name="component_height"/>
+            <Option value="0" type="double" name="component_pos_x"/>
+            <Option value="0" type="double" name="component_pos_y"/>
+            <Option value="100" type="double" name="component_width"/>
+            <Option value="true" type="bool" name="outputs_collapsed"/>
+            <Option value="true" type="bool" name="parameters_collapsed"/>
+          </Option>
+          <Option value="Output transects" type="QString" name="component_description"/>
+          <Option value="30" type="double" name="component_height"/>
+          <Option value="2021.3343101878938" type="double" name="component_pos_x"/>
+          <Option value="1826.2269892957124" type="double" name="component_pos_y"/>
+          <Option value="200" type="double" name="component_width"/>
+          <Option type="invalid" name="default_value"/>
+          <Option value="false" type="bool" name="mandatory"/>
+          <Option value="Output transects" type="QString" name="name"/>
+          <Option value="OUTPUT" type="QString" name="output_name"/>
+          <Option value="true" type="bool" name="outputs_collapsed"/>
+          <Option value="true" type="bool" name="parameters_collapsed"/>
+        </Option>
+      </Option>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELDS_MAPPING">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option type="List" name="static_value">
+              <Option type="Map">
+                <Option value="&quot;SEZ-ID&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="SEZ-ID" type="QString" name="name"/>
+                <Option value="0" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="2" type="int" name="type"/>
+                <Option value="integer" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;R-min-dist-R&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="min-RB-R" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;R-max-dist-R&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="max-RB-R" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;L-min-dist-L&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="min-RB-L" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+              <Option type="Map">
+                <Option value="&quot;L-max-dist-L&quot;" type="QString" name="expression"/>
+                <Option value="255" type="int" name="length"/>
+                <Option value="max-RB-L" type="QString" name="name"/>
+                <Option value="3" type="int" name="precision"/>
+                <Option value="0" type="int" name="sub_type"/>
+                <Option value="6" type="int" name="type"/>
+                <Option value="double precision" type="QString" name="type_name"/>
+              </Option>
+            </Option>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:joinattributestable_2" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:transect_1">
+      <Option value="true" type="bool" name="active"/>
+      <Option name="alg_config"/>
+      <Option value="native:transect" type="QString" name="alg_id"/>
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Make Transects" type="QString" name="component_description"/>
+        <Option value="30" type="double" name="component_height"/>
+        <Option value="905" type="double" name="component_pos_x"/>
+        <Option value="770" type="double" name="component_pos_y"/>
+        <Option value="124" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="Transects" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="773" type="double" name="component_pos_x"/>
+      <Option value="859" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option value="native:transect_1" type="QString" name="id"/>
+      <Option name="outputs"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="ANGLE">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="90" type="double" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option value="native:pointstopath_1" type="QString" name="child_id"/>
+            <Option value="OUTPUT" type="QString" name="output_name"/>
+            <Option value="1" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="LENGTH">
+          <Option type="Map">
+            <Option value="transects_width" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SIDE">
+          <Option type="Map">
+            <Option value="2" type="int" name="source"/>
+            <Option value="2" type="int" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option type="Map" name="designerParameterValues">
+    <Option value="031_06_sponda_sx_2022_93a08e3e_f466_42b1_bcd5_598ac75d5a5f" type="QString" name="left_riverbank__rbl"/>
+    <Option value="031_06_sponda_dx_2022_b0d46342_4774_48e8_8285_2d120605d625" type="QString" name="right_riverbank__rbr"/>
+    <Option value="031_06_Asta_543b508b_7bed_4482_bb4d_5544a4dc19dc" type="QString" name="river_centerline"/>
+    <Option value="100" type="int" name="step"/>
+    <Option type="QgsProcessingOutputLayerDefinition" name="transects">
+      <Option type="Map">
+        <Option type="Map" name="create_options">
+          <Option value="UTF-8" type="QString" name="fileEncoding"/>
+        </Option>
+        <Option type="Map" name="sink">
+          <Option value="true" type="bool" name="active"/>
+          <Option value="1" type="int" name="type"/>
+          <Option value="TEMPORARY_OUTPUT" type="QString" name="val"/>
+        </Option>
+      </Option>
+    </Option>
+    <Option value="200" type="int" name="transects_width"/>
+    <Option type="QgsProcessingOutputLayerDefinition" name="transecttest">
+      <Option type="Map">
+        <Option type="Map" name="create_options">
+          <Option value="UTF-8" type="QString" name="fileEncoding"/>
+        </Option>
+        <Option type="Map" name="sink">
+          <Option value="true" type="bool" name="active"/>
+          <Option value="1" type="int" name="type"/>
+          <Option value="TEMPORARY_OUTPUT" type="QString" name="val"/>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="groupBoxes"/>
+  <Option type="Map" name="help">
+    <Option value="Gianfranco Di Pietro - Phd Student @ Università di Catania" type="QString" name="ALG_CREATOR"/>
+    <Option value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:600; font-style:italic;&quot;>Description&lt;/span>&lt;/p>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Distance between banks and axis of a river along its path, useful for morphological analysis.&lt;/p>&#xa;&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The river centerline is simplified into fixed-length segments. &lt;/p>&#xa;&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>For each step along the path, this model calculates the distance between the centerline and the left/right banks.&lt;/p>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Here how it works:&lt;/p>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>1.Create nodes along the river centerline path using the input parameter &lt;span style=&quot; font-style:italic;&quot;>step&lt;/span>.&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>2.Assign a key-value attribute called &lt;span style=&quot; font-style:italic;&quot;>SEZ-ID&lt;/span> to each node.&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>3.Create a new simplified river centerline based on these nodes.&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>4.Generate transects perpendicular to the simplified river centerline.&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>5.Perform a spatial join between transects and nodes to assign the &lt;span style=&quot; font-style:italic;&quot;>SEZ-ID&lt;/span> key-value to transects.&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>6.Identify intersection nodes between transects and riverbanks (left/right).&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>7.Add intersection coordinates (X/Y) to the attribute table.&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>8.Calculate the maximum and minimum distances from the centerline (in cases with two or more intersections).&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>9.Perform a spatial join between intersection nodes and transects.&lt;/p>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>10.Clean field data and generate the final output. &lt;/p>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:1; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&lt;/body>&lt;/html>" type="QString" name="ALG_DESC"/>
+    <Option value="Gianfranco Di Pietro - Phd Student @ Università di Catania" type="QString" name="ALG_HELP_CREATOR"/>
+    <Option value="v.1.4  -  Feb/15/2024" type="QString" name="ALG_VERSION"/>
+    <Option value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&lt;/body>&lt;/html>" type="QString" name="EXAMPLES"/>
+    <Option value="https://github.com/gianfrancodp/qgis-riverbanks-tools" type="QString" name="HELP_URL"/>
+    <Option value="Distance between banks and center of a river along centerline path of a river" type="QString" name="SHORT_DESCRIPTION"/>
+    <Option value="Se flaggato inverte l'ordine progressivo delle sezioni.&#xa;In caso di dover invertire l'ordine da valle verso monte e viceversa&#xa;dell'inizio della numerazione delle sezioni e dei transetti.&#xa;nota agisce sul campo SEZ-ID" type="QString" name="inverti_ordine_sezioni"/>
+    <Option value="Questo valore deve essere sufficientemente grande,  pari ad almeno al doppio della massima distanza a cui potrebbe trovarsi la sponda.&#xa;Viene utilizzato per generare dei transetti ortogonali all'asse del fiume nei nodi in cui viene effettuato il calcolo" type="QString" name="larghezza_sezioni_di_analisi_m"/>
+    <Option value="Nodes features. Intersection between Transects and Left riverbanks" type="QString" name="left_nodes"/>
+    <Option value="This LineString type vector must contain ONLY 1-line feature&#xa;This is the feature of Left Riverbank" type="QString" name="left_riverbank__rbl"/>
+    <Option value="Questo parametro indica la lunghezza del campo numerico SEZ-ID in cui viene salvato il numero che identifica la sezione per cui viene calcolata la distanza tra le sponde.&#xa;" type="QString" name="lunghezza_campo_id_sezioni"/>
+    <Option value="Vettore dei punti di intersezione tra i transetti e la sponda Destra" type="QString" name="nodi_intdx"/>
+    <Option value="Vettore dei punti di intersezione tra i transetti e la sponda Sinistra" type="QString" name="nodi_intsx"/>
+    <Option value="Il vettore risultante è costituito da un layer puntuale; per ogni punto di coordinate lungo l'asse dell'alveo vengono riportati i risultati dell'algoritmo.&#xa;&#xa;NOTA: la distanza diretta tra un nodo e l'altro non coincide con il parametro &quot;passo sezioni&quot; in quanto calcolata lungo lo sviluppo del vettore di input &quot;asse alveo&quot;" type="QString" name="nodidistsponde"/>
+    <Option value="Main output data.&#xa;Line features as transects along path of centerline.&#xa;Fields contains these data:&#xa;{SEZ-ID: Transect id (key field)}, &#xa;{min-RB-R: miminum distance from centerline to RIGHT riverbank},  &#xa;{max-RB-R: maximum distance from centerline to RIGHT riverbank},&#xa;{min-RB-L: miminum distance from centerline to LEFT riverbank}, &#xa;{max-RB-L: maximum distance from centerline to LEFT riverbank}" type="QString" name="output_transects"/>
+    <Option value="Questo parametro determina la distanza tra una sezione e l'altra per cui vengno generati i transetti e calcolate le distanze con le sponde. " type="QString" name="passo_sezioni"/>
+    <Option value="" type="QString" name="revert_path_direction"/>
+    <Option value="If set to TRUE,  the order of the sections along the river channel is reversed.&#xa;Useful for validate the direction of the river-path in morphological analysis (From Bottom to Valley or vice-versa)" type="QString" name="revert_path_order"/>
+    <Option value="If true, key value order along path for transects is reverted " type="QString" name="revertpathdirection"/>
+    <Option value="Nodes features. Intersection between Transects and Right riverbanks" type="QString" name="right_nodes"/>
+    <Option value="This LineString type vector must contain ONLY 1-line feature&#xa;This is the feature of Right riverbank" type="QString" name="right_riverbank__rbr"/>
+    <Option value="This LineString type vector must contain ONLY 1-line feature&#xa;This is the feature of river path." type="QString" name="river_centerline"/>
+    <Option value="This parameter indicates the length of the SEZ-ID number field in which the number identifying the section for which the distance between banks is calculated is saved." type="QString" name="sezid_field_lenght"/>
+    <Option value="Layer di ingresso:&#xa;deve contenente 1 sola feature lineare che descrive la sponda DESTRA" type="QString" name="sponda_dx"/>
+    <Option value="Layer di ingresso:&#xa;deve contenente 1 sola feature lineare che descrive la sponda SINISTRA" type="QString" name="sponda_sx"/>
+    <Option value="Distance along river path from a node to another.&#xa;this parameter is used for generating transects and calculation of distances.&#xa;&#xa;A too short step increase computational resource needs and accuracy of data.&#xa;A too long step decrease accuracy of the output parameters that describe morphology of the river." type="QString" name="step"/>
+    <Option value="This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect riverbanks.&#xa;It is used to generate transects orthogonal to the river simplified centerline " type="QString" name="transects_width"/>
+    <Option value="Risultato di Calcolo.&#xa;Vettore di tipo &quot;linea&quot; che contiene i Transetti.&#xa;Per ogni transetto in tabella viene riportato:&#xa;- Coordinate x e y dell'asse alveo&#xa;- Coordinate x e y dell'intersezione destra&#xa;- Coordinate x e y dell'intersezione sinistra&#xa;- distanza tra l'asse alveo e le due intersezioni" type="QString" name="transetti"/>
+    <Option value="Transetti non agganciabili a sezioni" type="QString" name="transetti_errati_dx"/>
+    <Option value="Transetti che non intersecano le sponde (una o entrambe)" type="QString" name="transetti_senza_intersezioni_con_sponde"/>
+    <Option value="Transetti non agganciabili a sezioni" type="QString" name="transettierrati_sx"/>
+    <Option value="Layer di ingresso:&#xa;deve contenente 1 sola feature lineare che descrive l'ASSE ALVEO" type="QString" name="vettore_asse_alveo"/>
+  </Option>
+  <Option value="Version2" type="QString" name="internal_version"/>
+  <Option name="modelVariables"/>
+  <Option value="RBTools" type="QString" name="model_group"/>
+  <Option value="River Banks Distance v.1.4.1" type="QString" name="model_name"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="left_nodes">
+      <Option value="true" type="bool" name="create_by_default"/>
+      <Option value="-1" type="int" name="data_type"/>
+      <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Left nodes" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="" type="QString" name="help"/>
+      <Option type="Map" name="metadata">
+        <Option value="native:refactorfields_1" type="QString" name="_modelChildId"/>
+        <Option value="Left nodes" type="QString" name="_modelChildOutputName"/>
+        <Option value="native" type="QString" name="_modelChildProvider"/>
+      </Option>
+      <Option value="left_nodes" type="QString" name="name"/>
+      <Option value="sink" type="QString" name="parameter_type"/>
+      <Option value="true" type="bool" name="supports_append"/>
+      <Option value="true" type="bool" name="supports_non_file_outputs"/>
+    </Option>
+    <Option type="Map" name="left_riverbank__rbl">
+      <Option type="List" name="data_types">
+        <Option value="1" type="int"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Left Riverbank - RB-L" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="This LineString type vector must contain ONLY 1-line feature&#xa;This is the feature of Left Riverbank" type="QString" name="help"/>
+      <Option name="metadata"/>
+      <Option value="left_riverbank__rbl" type="QString" name="name"/>
+      <Option value="vector" type="QString" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="output_transects">
+      <Option value="true" type="bool" name="create_by_default"/>
+      <Option value="-1" type="int" name="data_type"/>
+      <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Output transects" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="" type="QString" name="help"/>
+      <Option type="Map" name="metadata">
+        <Option value="native:refactorfields_3" type="QString" name="_modelChildId"/>
+        <Option value="Output transects" type="QString" name="_modelChildOutputName"/>
+        <Option value="native" type="QString" name="_modelChildProvider"/>
+      </Option>
+      <Option value="output_transects" type="QString" name="name"/>
+      <Option value="sink" type="QString" name="parameter_type"/>
+      <Option value="true" type="bool" name="supports_append"/>
+      <Option value="true" type="bool" name="supports_non_file_outputs"/>
+    </Option>
+    <Option type="Map" name="revertpathdirection">
+      <Option value="false" type="bool" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Revert-path-direction" type="QString" name="description"/>
+      <Option value="2" type="int" name="flags"/>
+      <Option value="If true, key value order along path for transects is reverted " type="QString" name="help"/>
+      <Option name="metadata"/>
+      <Option value="revertpathdirection" type="QString" name="name"/>
+      <Option value="boolean" type="QString" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="right_nodes">
+      <Option value="true" type="bool" name="create_by_default"/>
+      <Option value="-1" type="int" name="data_type"/>
+      <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Right nodes" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="" type="QString" name="help"/>
+      <Option type="Map" name="metadata">
+        <Option value="native:refactorfields_2" type="QString" name="_modelChildId"/>
+        <Option value="Right nodes" type="QString" name="_modelChildOutputName"/>
+        <Option value="native" type="QString" name="_modelChildProvider"/>
+      </Option>
+      <Option value="right_nodes" type="QString" name="name"/>
+      <Option value="sink" type="QString" name="parameter_type"/>
+      <Option value="true" type="bool" name="supports_append"/>
+      <Option value="true" type="bool" name="supports_non_file_outputs"/>
+    </Option>
+    <Option type="Map" name="right_riverbank__rbr">
+      <Option type="List" name="data_types">
+        <Option value="1" type="int"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Right Riverbank - RB-R" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="This LineString type vector must contain ONLY 1-line feature&#xa;This is the feature of Right riverbank" type="QString" name="help"/>
+      <Option name="metadata"/>
+      <Option value="right_riverbank__rbr" type="QString" name="name"/>
+      <Option value="vector" type="QString" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="river_centerline">
+      <Option type="List" name="data_types">
+        <Option value="1" type="int"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="River centerline" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="This LineString type vector must contain ONLY 1-line feature&#xa;This is the feature of river path." type="QString" name="help"/>
+      <Option name="metadata"/>
+      <Option value="river_centerline" type="QString" name="name"/>
+      <Option value="vector" type="QString" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="sezid_field_lenght">
+      <Option value="0" type="int" name="data_type"/>
+      <Option value="255" type="double" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="SEZ-ID field lenght" type="QString" name="description"/>
+      <Option value="2" type="int" name="flags"/>
+      <Option value="This parameter indicates the length of the SEZ-ID number field in which the number identifying the section for which the distance between banks is calculated is saved." type="QString" name="help"/>
+      <Option value="1.7976931348623157e+308" type="double" name="max"/>
+      <Option name="metadata"/>
+      <Option value="1" type="double" name="min"/>
+      <Option value="sezid_field_lenght" type="QString" name="name"/>
+      <Option value="number" type="QString" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="step">
+      <Option value="0" type="int" name="data_type"/>
+      <Option value="50" type="double" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Step" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="Distance along river path from a node to another.&#xa;this parameter is used for generating transects and calculation of distances.&#xa;&#xa;A too short step increase computational resource needs and accuracy of data.&#xa;A too long step decrease accuracy of the output parameters that describe morphology of the river." type="QString" name="help"/>
+      <Option value="1.7976931348623157e+308" type="double" name="max"/>
+      <Option name="metadata"/>
+      <Option value="1" type="double" name="min"/>
+      <Option value="step" type="QString" name="name"/>
+      <Option value="number" type="QString" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="transects_width">
+      <Option value="0" type="int" name="data_type"/>
+      <Option value="100" type="double" name="default"/>
+      <Option type="invalid" name="defaultGui"/>
+      <Option value="Transects width" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
+      <Option value="This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect riverbanks.&#xa;It is used to generate transects orthogonal to the river simplified centerline " type="QString" name="help"/>
+      <Option value="1.7976931348623157e+308" type="double" name="max"/>
+      <Option name="metadata"/>
+      <Option value="-1.7976931348623157e+308" type="double" name="min"/>
+      <Option value="transects_width" type="QString" name="name"/>
+      <Option value="number" type="QString" name="parameter_type"/>
+    </Option>
+  </Option>
+  <Option name="parameterOrder"/>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="left_riverbank__rbl">
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="1049" type="double" name="component_pos_x"/>
+        <Option value="15" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="left_riverbank__rbl" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="406" type="double" name="component_pos_x"/>
+      <Option value="916" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option value="left_riverbank__rbl" type="QString" name="name"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+    </Option>
+    <Option type="Map" name="revertpathdirection">
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="If set to TRUE, the cardinal order of the sections along the river channel is reversed. This becomes useful in the case of digitized rods in the reverse direction from the desired direction" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="594" type="double" name="component_pos_x"/>
+        <Option value="159" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="revertpathdirection" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="394" type="double" name="component_pos_x"/>
+      <Option value="204" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option value="revertpathdirection" type="QString" name="name"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+    </Option>
+    <Option type="Map" name="right_riverbank__rbr">
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="829" type="double" name="component_pos_x"/>
+        <Option value="15" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="right_riverbank__rbr" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="1163" type="double" name="component_pos_x"/>
+      <Option value="1052" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option value="right_riverbank__rbr" type="QString" name="name"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+    </Option>
+    <Option type="Map" name="river_centerline">
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="446" type="double" name="component_pos_x"/>
+        <Option value="119" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="river_centerline" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="468" type="double" name="component_pos_x"/>
+      <Option value="290" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option value="river_centerline" type="QString" name="name"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+    </Option>
+    <Option type="Map" name="sezid_field_lenght">
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="1248" type="double" name="component_pos_x"/>
+        <Option value="277" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="sezid_field_lenght" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="1042" type="double" name="component_pos_x"/>
+      <Option value="274" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option value="sezid_field_lenght" type="QString" name="name"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+    </Option>
+    <Option type="Map" name="step">
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="" type="QString" name="color"/>
+        <Option value="Distance along river path from a node to another." type="QString" name="component_description"/>
+        <Option value="60" type="double" name="component_height"/>
+        <Option value="744" type="double" name="component_pos_x"/>
+        <Option value="173" type="double" name="component_pos_y"/>
+        <Option value="100" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="step" type="QString" name="component_description"/>
+      <Option value="30" type="double" name="component_height"/>
+      <Option value="743" type="double" name="component_pos_x"/>
+      <Option value="282" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option value="step" type="QString" name="name"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+    </Option>
+    <Option type="Map" name="transects_width">
+      <Option value="" type="QString" name="color"/>
+      <Option type="Map" name="comment">
+        <Option value="166,206,227,255" type="QString" name="color"/>
+        <Option value="" type="QString" name="component_description"/>
+        <Option value="54.60291282865956" type="double" name="component_height"/>
+        <Option value="863.6313093494343" type="double" name="component_pos_x"/>
+        <Option value="345.1218319803233" type="double" name="component_pos_y"/>
+        <Option value="244.821839097635" type="double" name="component_width"/>
+        <Option value="true" type="bool" name="outputs_collapsed"/>
+        <Option value="true" type="bool" name="parameters_collapsed"/>
+      </Option>
+      <Option value="transects_width" type="QString" name="component_description"/>
+      <Option value="32" type="double" name="component_height"/>
+      <Option value="330" type="double" name="component_pos_x"/>
+      <Option value="758" type="double" name="component_pos_y"/>
+      <Option value="200" type="double" name="component_width"/>
+      <Option value="transects_width" type="QString" name="name"/>
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+    </Option>
+  </Option>
+</Option>

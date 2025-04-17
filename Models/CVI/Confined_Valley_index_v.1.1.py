@@ -2,7 +2,7 @@
 Model exported as python.
 manually commented after exporting
 Name : Confined Valley Index
-CC-BY-SA: Gianfranco Di Pietro
+GNU GENERAL PUBLIC LICENSE: Gianfranco Di Pietro
 PhD Student - gianfranco.dipietro@phd.unict.it
 Created and tested With QGIS : 32811 - FIRENZE
 this project is part of:

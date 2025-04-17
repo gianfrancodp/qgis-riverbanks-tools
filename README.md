@@ -65,7 +65,7 @@ v. 1.1 (December 2023)
 
 ### Description
 
-The algorithm is used to calculate the relationship $C_{Vi}$ between the *width* of the ValleyBottom $VB_W$ and the *banks of a river* $RB_W$.
+The algorithm calculates the relationship $C_{VI}$ between the "width" of the ValleyBottom $VB_W$ and the "banks of a river" $RB_W$. and the *banks of a river* $RB_W$.
 
 $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
@@ -84,7 +84,7 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
 ![CVI-index-B](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.-B.jpg)
 
-Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated,  the minimum value is taken. 
+Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated, the minimum value is taken.
 
 ### Output
 
@@ -112,17 +112,18 @@ An example of the results is shown in this map. A scaled-type symbology was used
 
 ![RDB-example-C](Models/RBD/images/RBD-example-C.png)
 
---> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.model3) Qgis model3 file
+--> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.1.model3) Qgis graphical *model3* file
+--> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.1.model3.py) Qgis python script file
 
 ### RBD Description
 
-distance between banks and axis of a river along path; useful for morphological analysis.
+Distance between banks and axis of a river along each path; useful for morphological analysis.ks and axis of a river along path; useful for morphological analysis.
 
-Centerline of the river is simplyfied into fixed-lenght segments,  for each step along the path this model get the distance between centerline and left/right banks.
+Centerline of the river is simplyfied into fixed-lenght segments, for each step along the path this model get the distance between centerline and left/right banks.
 
 Here how it works:
 
-1. Create nodes along river centerline path,  using the input "step"
+1. Create nodes along river centerline path, using the input "step"
 2. Assign a key-value for each nodes called "SEZ-ID"
 3. Create a new simplified river centerline using nodes
 4. Create transect across simplified river centerline
