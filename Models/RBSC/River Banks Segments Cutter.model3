@@ -1,612 +1,616 @@
 <!DOCTYPE model>
 <Option type="Map">
-  <Option type="Map" name="children">
-    <Option type="Map" name="native:fieldcalculator_1">
-      <Option type="bool" value="true" name="active"/>
+  <Option name="children" type="Map">
+    <Option name="native:fieldcalculator_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option type="QString" value="native:fieldcalculator" name="alg_id"/>
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="601.227425004788" name="component_pos_x"/>
-        <Option type="double" value="733.1380363729221" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="alg_id" type="QString" value="native:fieldcalculator"/>
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value=""/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="601.227425004788"/>
+        <Option name="component_pos_y" type="double" value="733.1380363729221"/>
+        <Option name="component_width" type="double" value="100"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="Max lenght of separation lines" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="468.9818264138383" name="component_pos_x"/>
-      <Option type="double" value="688.9875082031191" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
+      <Option name="component_description" type="QString" value="Max lenght of separation lines (field calc)"/>
+      <Option name="component_height" type="double" value="40.66666666666663"/>
+      <Option name="component_pos_x" type="double" value="468.9818264138383"/>
+      <Option name="component_pos_y" type="double" value="694.3208415364525"/>
+      <Option name="component_width" type="double" value="200"/>
       <Option name="dependencies"/>
-      <Option type="QString" value="native:fieldcalculator_1" name="id"/>
+      <Option name="id" type="QString" value="native:fieldcalculator_1"/>
       <Option name="outputs"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="FIELD_LENGTH">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="FIELD_LENGTH" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="int" value="0" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="FIELD_NAME">
+        <Option name="FIELD_NAME" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="QString" value="len" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="len"/>
           </Option>
         </Option>
-        <Option type="List" name="FIELD_PRECISION">
+        <Option name="FIELD_PRECISION" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="int" value="0" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="FIELD_TYPE">
+        <Option name="FIELD_TYPE" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="int" value="0" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="FORMULA">
+        <Option name="FORMULA" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="QString" value="$length" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="$length"/>
           </Option>
         </Option>
-        <Option type="List" name="INPUT">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option type="QString" value="river_stretch_separation_lines" name="parameter_name"/>
-            <Option type="int" value="0" name="source"/>
+            <Option name="parameter_name" type="QString" value="river_reach_transect_limits"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="native:joinbynearest_1">
-      <Option type="bool" value="true" name="active"/>
+    <Option name="native:joinbynearest_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option type="QString" value="native:joinbynearest" name="alg_id"/>
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="1053.932214000649" name="component_pos_x"/>
-        <Option type="double" value="253.937532591332" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="alg_id" type="QString" value="native:joinbynearest"/>
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value=""/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="1053.932214000649"/>
+        <Option name="component_pos_y" type="double" value="253.937532591332"/>
+        <Option name="component_width" type="double" value="100"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="LEFT RB with field from C" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="853.9322140006491" name="component_pos_x"/>
-      <Option type="double" value="298.937532591332" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
+      <Option name="component_description" type="QString" value="LEFT RB with field from C (spatial join)"/>
+      <Option name="component_height" type="double" value="40.48877387610361"/>
+      <Option name="component_pos_x" type="double" value="853.9322140006491"/>
+      <Option name="component_pos_y" type="double" value="304.1819195293838"/>
+      <Option name="component_width" type="double" value="200"/>
       <Option name="dependencies"/>
-      <Option type="QString" value="native:joinbynearest_1" name="id"/>
-      <Option type="Map" name="outputs">
-        <Option type="Map" name="LRB">
-          <Option type="QString" value="native:joinbynearest_1" name="child_id"/>
-          <Option type="QString" value="" name="color"/>
-          <Option type="Map" name="comment">
-            <Option type="QString" value="" name="color"/>
-            <Option type="QString" value="" name="component_description"/>
-            <Option type="double" value="60" name="component_height"/>
-            <Option type="double" value="0" name="component_pos_x"/>
-            <Option type="double" value="0" name="component_pos_y"/>
-            <Option type="double" value="100" name="component_width"/>
-            <Option type="bool" value="true" name="outputs_collapsed"/>
-            <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="id" type="QString" value="native:joinbynearest_1"/>
+      <Option name="outputs" type="Map">
+        <Option name="LRB" type="Map">
+          <Option name="child_id" type="QString" value="native:joinbynearest_1"/>
+          <Option name="color" type="QString" value=""/>
+          <Option name="comment" type="Map">
+            <Option name="color" type="QString" value=""/>
+            <Option name="component_description" type="QString" value=""/>
+            <Option name="component_height" type="double" value="60"/>
+            <Option name="component_pos_x" type="double" value="0"/>
+            <Option name="component_pos_y" type="double" value="0"/>
+            <Option name="component_width" type="double" value="100"/>
+            <Option name="outputs_collapsed" type="bool" value="true"/>
+            <Option name="parameters_collapsed" type="bool" value="true"/>
           </Option>
-          <Option type="QString" value="LRB" name="component_description"/>
-          <Option type="double" value="30" name="component_height"/>
-          <Option type="double" value="1089.1062792946157" name="component_pos_x"/>
-          <Option type="double" value="295.73603570700743" name="component_pos_y"/>
-          <Option type="double" value="200" name="component_width"/>
-          <Option type="invalid" name="default_value"/>
-          <Option type="bool" value="false" name="mandatory"/>
-          <Option type="QString" value="LRB" name="name"/>
-          <Option type="QString" value="OUTPUT" name="output_name"/>
-          <Option type="bool" value="true" name="outputs_collapsed"/>
-          <Option type="bool" value="true" name="parameters_collapsed"/>
+          <Option name="component_description" type="QString" value="LRB"/>
+          <Option name="component_height" type="double" value="30"/>
+          <Option name="component_pos_x" type="double" value="1089.1062792946157"/>
+          <Option name="component_pos_y" type="double" value="295.73603570700743"/>
+          <Option name="component_width" type="double" value="200"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" type="bool" value="false"/>
+          <Option name="name" type="QString" value="LRB"/>
+          <Option name="output_name" type="QString" value="OUTPUT"/>
+          <Option name="outputs_collapsed" type="bool" value="true"/>
+          <Option name="parameters_collapsed" type="bool" value="true"/>
         </Option>
       </Option>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="DISCARD_NONMATCHING">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="DISCARD_NONMATCHING" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="bool" value="false" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
           </Option>
         </Option>
-        <Option type="List" name="FIELDS_TO_COPY">
+        <Option name="FIELDS_TO_COPY" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="List" name="static_value">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="StringList">
               <Option type="QString" value=""/>
             </Option>
           </Option>
         </Option>
-        <Option type="List" name="INPUT">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option type="QString" value="native:splitwithlines_1" name="child_id"/>
-            <Option type="QString" value="OUTPUT" name="output_name"/>
-            <Option type="int" value="1" name="source"/>
+            <Option name="child_id" type="QString" value="native:splitwithlines_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="INPUT_2">
+        <Option name="INPUT_2" type="List">
           <Option type="Map">
-            <Option type="QString" value="river_centerline_stretch" name="parameter_name"/>
-            <Option type="int" value="0" name="source"/>
+            <Option name="parameter_name" type="QString" value="river_centerline_reaches"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="MAX_DISTANCE">
+        <Option name="MAX_DISTANCE" type="List">
           <Option type="Map">
-            <Option type="QString" value="qgis:basicstatisticsforfields_1" name="child_id"/>
-            <Option type="QString" value="MAX" name="output_name"/>
-            <Option type="int" value="1" name="source"/>
+            <Option name="child_id" type="QString" value="qgis:basicstatisticsforfields_1"/>
+            <Option name="output_name" type="QString" value="MAX"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="NEIGHBORS">
+        <Option name="NEIGHBORS" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="int" value="1" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="PREFIX">
+        <Option name="PREFIX" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="QString" value="" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="native:joinbynearest_2">
-      <Option type="bool" value="true" name="active"/>
+    <Option name="native:joinbynearest_2" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option type="QString" value="native:joinbynearest" name="alg_id"/>
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="1192.3745958974546" name="component_pos_x"/>
-        <Option type="double" value="370.32714569041616" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="alg_id" type="QString" value="native:joinbynearest"/>
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value=""/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="1192.3745958974546"/>
+        <Option name="component_pos_y" type="double" value="370.32714569041616"/>
+        <Option name="component_width" type="double" value="100"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="RIGHT RB with field from C" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="871.0843675099877" name="component_pos_x"/>
-      <Option type="double" value="417.7774533346074" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
+      <Option name="component_description" type="QString" value="RIGHT RB with field from C (spatial join)"/>
+      <Option name="component_height" type="double" value="38.39101910088283"/>
+      <Option name="component_pos_x" type="double" value="871.0843675099877"/>
+      <Option name="component_pos_y" type="double" value="420.63962955171553"/>
+      <Option name="component_width" type="double" value="200"/>
       <Option name="dependencies"/>
-      <Option type="QString" value="native:joinbynearest_2" name="id"/>
-      <Option type="Map" name="outputs">
-        <Option type="Map" name="RRB">
-          <Option type="QString" value="native:joinbynearest_2" name="child_id"/>
-          <Option type="QString" value="" name="color"/>
-          <Option type="Map" name="comment">
-            <Option type="QString" value="" name="color"/>
-            <Option type="QString" value="" name="component_description"/>
-            <Option type="double" value="60" name="component_height"/>
-            <Option type="double" value="0" name="component_pos_x"/>
-            <Option type="double" value="0" name="component_pos_y"/>
-            <Option type="double" value="100" name="component_width"/>
-            <Option type="bool" value="true" name="outputs_collapsed"/>
-            <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="id" type="QString" value="native:joinbynearest_2"/>
+      <Option name="outputs" type="Map">
+        <Option name="RRB" type="Map">
+          <Option name="child_id" type="QString" value="native:joinbynearest_2"/>
+          <Option name="color" type="QString" value=""/>
+          <Option name="comment" type="Map">
+            <Option name="color" type="QString" value=""/>
+            <Option name="component_description" type="QString" value=""/>
+            <Option name="component_height" type="double" value="60"/>
+            <Option name="component_pos_x" type="double" value="0"/>
+            <Option name="component_pos_y" type="double" value="0"/>
+            <Option name="component_width" type="double" value="100"/>
+            <Option name="outputs_collapsed" type="bool" value="true"/>
+            <Option name="parameters_collapsed" type="bool" value="true"/>
           </Option>
-          <Option type="QString" value="RRB" name="component_description"/>
-          <Option type="double" value="30" name="component_height"/>
-          <Option type="double" value="1092.063372651698" name="component_pos_x"/>
-          <Option type="double" value="417.33662144223484" name="component_pos_y"/>
-          <Option type="double" value="200" name="component_width"/>
-          <Option type="invalid" name="default_value"/>
-          <Option type="bool" value="false" name="mandatory"/>
-          <Option type="QString" value="RRB" name="name"/>
-          <Option type="QString" value="OUTPUT" name="output_name"/>
-          <Option type="bool" value="true" name="outputs_collapsed"/>
-          <Option type="bool" value="true" name="parameters_collapsed"/>
+          <Option name="component_description" type="QString" value="RRB"/>
+          <Option name="component_height" type="double" value="30"/>
+          <Option name="component_pos_x" type="double" value="1092.063372651698"/>
+          <Option name="component_pos_y" type="double" value="417.33662144223484"/>
+          <Option name="component_width" type="double" value="200"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" type="bool" value="false"/>
+          <Option name="name" type="QString" value="RRB"/>
+          <Option name="output_name" type="QString" value="OUTPUT"/>
+          <Option name="outputs_collapsed" type="bool" value="true"/>
+          <Option name="parameters_collapsed" type="bool" value="true"/>
         </Option>
       </Option>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="DISCARD_NONMATCHING">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="DISCARD_NONMATCHING" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="bool" value="false" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
           </Option>
         </Option>
-        <Option type="List" name="FIELDS_TO_COPY">
+        <Option name="FIELDS_TO_COPY" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="List" name="static_value">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="StringList">
               <Option type="QString" value=""/>
             </Option>
           </Option>
         </Option>
-        <Option type="List" name="INPUT">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option type="QString" value="native:splitwithlines_2" name="child_id"/>
-            <Option type="QString" value="OUTPUT" name="output_name"/>
-            <Option type="int" value="1" name="source"/>
+            <Option name="child_id" type="QString" value="native:splitwithlines_2"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="INPUT_2">
+        <Option name="INPUT_2" type="List">
           <Option type="Map">
-            <Option type="QString" value="river_centerline_stretch" name="parameter_name"/>
-            <Option type="int" value="0" name="source"/>
+            <Option name="parameter_name" type="QString" value="river_centerline_reaches"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="MAX_DISTANCE">
+        <Option name="MAX_DISTANCE" type="List">
           <Option type="Map">
-            <Option type="QString" value="qgis:basicstatisticsforfields_1" name="child_id"/>
-            <Option type="QString" value="MAX" name="output_name"/>
-            <Option type="int" value="1" name="source"/>
+            <Option name="child_id" type="QString" value="qgis:basicstatisticsforfields_1"/>
+            <Option name="output_name" type="QString" value="MAX"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="NEIGHBORS">
+        <Option name="NEIGHBORS" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="int" value="1" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="PREFIX">
+        <Option name="PREFIX" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="QString" value="" name="static_value"/>
-          </Option>
-        </Option>
-      </Option>
-    </Option>
-    <Option type="Map" name="native:splitwithlines_1">
-      <Option type="bool" value="true" name="active"/>
-      <Option name="alg_config"/>
-      <Option type="QString" value="native:splitwithlines" name="alg_id"/>
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="617.3333333333333" name="component_pos_x"/>
-        <Option type="double" value="651" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
-      </Option>
-      <Option type="QString" value="LEFT riverbank cut" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="618.6666666666665" name="component_pos_x"/>
-      <Option type="double" value="300" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
-      <Option name="dependencies"/>
-      <Option type="QString" value="native:splitwithlines_1" name="id"/>
-      <Option name="outputs"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="INPUT">
-          <Option type="Map">
-            <Option type="QString" value="left_river_bank" name="parameter_name"/>
-            <Option type="int" value="0" name="source"/>
-          </Option>
-        </Option>
-        <Option type="List" name="LINES">
-          <Option type="Map">
-            <Option type="QString" value="river_stretch_separation_lines" name="parameter_name"/>
-            <Option type="int" value="0" name="source"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="native:splitwithlines_2">
-      <Option type="bool" value="true" name="active"/>
+    <Option name="native:splitwithlines_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option type="QString" value="native:splitwithlines" name="alg_id"/>
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="779.5734283833809" name="component_pos_x"/>
-        <Option type="double" value="383.6428480752088" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="alg_id" type="QString" value="native:splitwithlines"/>
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value=""/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="617.3333333333333"/>
+        <Option name="component_pos_y" type="double" value="651"/>
+        <Option name="component_width" type="double" value="100"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="RIGHT riverbank cut" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="617.0042122998076" name="component_pos_x"/>
-      <Option type="double" value="417.77584629302044" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
+      <Option name="component_description" type="QString" value="LEFT riverbank cut"/>
+      <Option name="component_height" type="double" value="30"/>
+      <Option name="component_pos_x" type="double" value="618.6666666666665"/>
+      <Option name="component_pos_y" type="double" value="300"/>
+      <Option name="component_width" type="double" value="200"/>
       <Option name="dependencies"/>
-      <Option type="QString" value="native:splitwithlines_2" name="id"/>
+      <Option name="id" type="QString" value="native:splitwithlines_1"/>
       <Option name="outputs"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="INPUT">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option type="QString" value="right_riverbank" name="parameter_name"/>
-            <Option type="int" value="0" name="source"/>
+            <Option name="parameter_name" type="QString" value="left_river_bank"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="LINES">
+        <Option name="LINES" type="List">
           <Option type="Map">
-            <Option type="QString" value="river_stretch_separation_lines" name="parameter_name"/>
-            <Option type="int" value="0" name="source"/>
+            <Option name="parameter_name" type="QString" value="river_reach_transect_limits"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="qgis:basicstatisticsforfields_1">
-      <Option type="bool" value="true" name="active"/>
+    <Option name="native:splitwithlines_2" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option type="QString" value="qgis:basicstatisticsforfields" name="alg_id"/>
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="949.2635958703572" name="component_pos_x"/>
-        <Option type="double" value="646.6279346495605" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="alg_id" type="QString" value="native:splitwithlines"/>
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value=""/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="779.5734283833809"/>
+        <Option name="component_pos_y" type="double" value="383.6428480752088"/>
+        <Option name="component_width" type="double" value="100"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="divider_line_statistics" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="702.6498475070326" name="component_pos_x"/>
-      <Option type="double" value="557.8667436939336" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
+      <Option name="component_description" type="QString" value="RIGHT riverbank cut"/>
+      <Option name="component_height" type="double" value="30"/>
+      <Option name="component_pos_x" type="double" value="617.0042122998076"/>
+      <Option name="component_pos_y" type="double" value="417.77584629302044"/>
+      <Option name="component_width" type="double" value="200"/>
       <Option name="dependencies"/>
-      <Option type="QString" value="qgis:basicstatisticsforfields_1" name="id"/>
+      <Option name="id" type="QString" value="native:splitwithlines_2"/>
       <Option name="outputs"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="FIELD_NAME">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option type="int" value="2" name="source"/>
-            <Option type="QString" value="len" name="static_value"/>
+            <Option name="parameter_name" type="QString" value="right_riverbank"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="INPUT_LAYER">
+        <Option name="LINES" type="List">
           <Option type="Map">
-            <Option type="QString" value="native:fieldcalculator_1" name="child_id"/>
-            <Option type="QString" value="OUTPUT" name="output_name"/>
-            <Option type="int" value="1" name="source"/>
+            <Option name="parameter_name" type="QString" value="river_reach_transect_limits"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:basicstatisticsforfields_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:basicstatisticsforfields"/>
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value=""/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="949.2635958703572"/>
+        <Option name="component_pos_y" type="double" value="646.6279346495605"/>
+        <Option name="component_width" type="double" value="100"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
+      </Option>
+      <Option name="component_description" type="QString" value="divider_line_statistics (field stat)"/>
+      <Option name="component_height" type="double" value="30"/>
+      <Option name="component_pos_x" type="double" value="702.6498475070326"/>
+      <Option name="component_pos_y" type="double" value="557.8667436939336"/>
+      <Option name="component_width" type="double" value="200"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="qgis:basicstatisticsforfields_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="FIELD_NAME" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="len"/>
+          </Option>
+        </Option>
+        <Option name="INPUT_LAYER" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="native:fieldcalculator_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
       </Option>
     </Option>
   </Option>
-  <Option type="Map" name="designerParameterValues">
-    <Option type="QString" value="062_05_sponda_sx_2022_a2098c11_d7a1_4f62_a905_cb502830cda1" name="left_river_bank"/>
-    <Option type="QgsProcessingOutputLayerDefinition" name="lrb">
+  <Option name="designerParameterValues" type="Map">
+    <Option name="left_river_bank" type="QString" value="062_05_sponda_sx_2022_a2098c11_d7a1_4f62_a905_cb502830cda1"/>
+    <Option name="lrb" type="QgsProcessingOutputLayerDefinition">
       <Option type="Map">
-        <Option type="Map" name="create_options">
-          <Option type="QString" value="UTF-8" name="fileEncoding"/>
+        <Option name="create_options" type="Map">
+          <Option name="fileEncoding" type="QString" value="UTF-8"/>
         </Option>
-        <Option type="Map" name="sink">
-          <Option type="bool" value="true" name="active"/>
-          <Option type="int" value="1" name="type"/>
-          <Option type="QString" value="TEMPORARY_OUTPUT" name="val"/>
+        <Option name="sink" type="Map">
+          <Option name="active" type="bool" value="true"/>
+          <Option name="type" type="int" value="1"/>
+          <Option name="val" type="QString" value="TEMPORARY_OUTPUT"/>
         </Option>
       </Option>
     </Option>
-    <Option type="QString" value="062_05_sponda_dx_2022_05b4dab5_47bf_4f05_8b5b_9ca84322dc52" name="right_riverbank"/>
-    <Option type="QString" value="062_05_Tratti_omogenei_5cacb142_bc28_4e68_a2f8_bc7c24242031" name="river_centerline_stretch"/>
-    <Option type="QString" value="062_05_Limiti_tratti_c6290ddd_6475_4a0c_b871_e43d63a2a626" name="river_stretch_separation_lines"/>
-    <Option type="QgsProcessingOutputLayerDefinition" name="rrb">
+    <Option name="right_riverbank" type="QString" value="062_05_sponda_dx_2022_05b4dab5_47bf_4f05_8b5b_9ca84322dc52"/>
+    <Option name="river_centerline_stretch" type="QString" value="062_05_Tratti_omogenei_5cacb142_bc28_4e68_a2f8_bc7c24242031"/>
+    <Option name="river_stretch_separation_lines" type="QString" value="062_05_Limiti_tratti_c6290ddd_6475_4a0c_b871_e43d63a2a626"/>
+    <Option name="rrb" type="QgsProcessingOutputLayerDefinition">
       <Option type="Map">
-        <Option type="Map" name="create_options">
-          <Option type="QString" value="UTF-8" name="fileEncoding"/>
+        <Option name="create_options" type="Map">
+          <Option name="fileEncoding" type="QString" value="UTF-8"/>
         </Option>
-        <Option type="Map" name="sink">
-          <Option type="bool" value="true" name="active"/>
-          <Option type="int" value="1" name="type"/>
-          <Option type="QString" value="TEMPORARY_OUTPUT" name="val"/>
+        <Option name="sink" type="Map">
+          <Option name="active" type="bool" value="true"/>
+          <Option name="type" type="int" value="1"/>
+          <Option name="val" type="QString" value="TEMPORARY_OUTPUT"/>
         </Option>
       </Option>
     </Option>
   </Option>
   <Option name="groupBoxes"/>
-  <Option type="Map" name="help">
-    <Option type="QString" value="Author: @gianfrancodp&#xa;Phd Student at University of Catania&#xa;&#xa;with contribution of the following at University of Catania:&#xa;- Martina Stagnitti&#xa;- Valeria Pennisi&#xa;- Rosaria Ester Musumeci" name="ALG_CREATOR"/>
-    <Option type="QString" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;h1 style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:xx-large; font-weight:600;&quot;>RB Segments Cutter&lt;/span>&lt;/h1>&#xa;&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>This model algorytm separate RiverBanks (RB) into single segments using the stretches of the River Centerline (RC) vector.&lt;br />New elements will inherit the field table values from RC.&lt;/p>&#xa;&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:x-large; font-weight:600;&quot;>Procedure description&lt;/span>&lt;/h2>&#xa;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 0;&quot;>&lt;li style=&quot;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Step #1: Cut RB with separation lines vector&lt;/li>&#xa;&lt;li style=&quot;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Step #2: Get the max lenght of separation lines feature&lt;/li>&#xa;&lt;li style=&quot;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Step #3: Use &amp;quot;proximity&amp;quot; join (with a threshold distance provided from Step #2) to inherit field table values from RC to RB&lt;/li>&lt;/ul>&lt;/body>&lt;/html>" name="ALG_DESC"/>
-    <Option type="QString" value="Author: @gianfrancodp&#xa;Phd Student at University of Catania&#xa;&#xa;with contribution of the following at University of Catania:&#xa;- Martina Stagnitti&#xa;- Valeria Pennisi&#xa;- Rosaria Ester Musumeci" name="ALG_HELP_CREATOR"/>
-    <Option type="QString" value="v.1.1 - beta" name="ALG_VERSION"/>
-    <Option type="QString" value="https://github.com/gianfrancodp/qgis-riverbanks-tools" name="HELP_URL"/>
-    <Option type="QString" value="Cut riverbanks in segments using cuttin lines" name="SHORT_DESCRIPTION"/>
-    <Option type="QString" value="LBR: Line or multiline feature with Left riverbank to consider.&#xa;This model is tested with a single-feature vector" name="left_river_bank"/>
-    <Option type="QString" value="RBR: Line or multiline feature with Right riverbank to consider.&#xa;This model is tested with a single-feature vector" name="right_riverbank"/>
-    <Option type="QString" value="RC: Line or multiline feature with River Centerline to consider.&#xa;This model is tested with a single-feature vector" name="river_centerline_stretch"/>
-    <Option type="QString" value="This vector contain only geometries used to cut RB.&#xa;This vector must be complaiant to RC stretches.&#xa;NONE of the field values of this vector will be inherited in the outputs." name="river_stretch_separation_lines"/>
+  <Option name="help" type="Map">
+    <Option name="ALG_CREATOR" type="QString" value="Author: @gianfrancodp&#xa;Phd Student at University of Catania&#xa;&#xa;with contribution of the following at University of Catania:&#xa;- Martina Stagnitti&#xa;- Valeria Pennisi&#xa;- Rosaria Ester Musumeci"/>
+    <Option name="ALG_DESC" type="QString" value="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;&quot;>&#xa;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xa;&lt;h1 style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:xx-large; font-weight:600;&quot;>RB Segments Cutter&lt;/span>&lt;/h1>&#xa;&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>This model algorytm separate RiverBanks (RB) into single segments using the stretches of the River Centerline (RC) vector.&lt;br />New elements will inherit the field table values from RC.&lt;/p>&#xa;&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:x-large; font-weight:600;&quot;>Procedure description&lt;/span>&lt;/h2>&#xa;&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 0;&quot;>&lt;li style=&quot;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Step #1: Cut RB with separation lines vector&lt;/li>&#xa;&lt;li style=&quot;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Step #2: Get the max lenght of separation lines feature&lt;/li>&#xa;&lt;li style=&quot;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Step #3: Use &amp;quot;proximity&amp;quot; join (with a threshold distance provided from Step #2) to inherit field table values from RC to RB&lt;/li>&lt;/ul>&lt;/body>&lt;/html>"/>
+    <Option name="ALG_HELP_CREATOR" type="QString" value="Author: @gianfrancodp&#xa;Phd Student at University of Catania&#xa;&#xa;with contribution of the following at University of Catania:&#xa;- Martina Stagnitti&#xa;- Valeria Pennisi&#xa;- Rosaria Ester Musumeci"/>
+    <Option name="ALG_VERSION" type="QString" value="v.1.1.1"/>
+    <Option name="HELP_URL" type="QString" value="https://github.com/gianfrancodp/qgis-riverbanks-tools"/>
+    <Option name="SHORT_DESCRIPTION" type="QString" value="Cut riverbanks in segments using cuttin lines"/>
+    <Option name="left_river_bank" type="QString" value="LBR: Line or multiline feature with Left riverbank to consider.&#xa;This model is tested with a single-feature vector"/>
+    <Option name="right_riverbank" type="QString" value="RBR: Line or multiline feature with Right riverbank to consider.&#xa;This model is tested with a single-feature vector"/>
+    <Option name="river_centerline_reaches" type="QString" value="Line features that contain the centerline of river.  The vector must be subdivided in single homogeneous stretch. &#xa;Field table contain te erosion rate value of every element"/>
+    <Option name="river_centerline_stretch" type="QString" value="RC: Line or multiline feature with River Centerline to consider.&#xa;This model is tested with a single-feature vector"/>
+    <Option name="river_reach_transect_limits" type="QString" value="Cutter geometry used to segment and cut riverbanks.&#xa;The best thing is to use specific transects at the exact point where the river is divided into distinct reaches.&#xa;This vector must be complaiant with the River centerline reaches vector. "/>
+    <Option name="river_stretch_separation_lines" type="QString" value="This vector contain only geometries used to cut RB.&#xa;This vector must be complaiant to RC stretches.&#xa;NONE of the field values of this vector will be inherited in the outputs."/>
   </Option>
-  <Option type="QString" value="Version2" name="internal_version"/>
+  <Option name="internal_version" type="QString" value="Version2"/>
   <Option name="modelVariables"/>
-  <Option type="QString" value="RBTools" name="model_group"/>
-  <Option type="QString" value="River Banks Segments Cutter" name="model_name"/>
-  <Option type="Map" name="parameterDefinitions">
-    <Option type="Map" name="left_river_bank">
-      <Option type="List" name="data_types">
+  <Option name="model_group" type="QString" value="RBTools"/>
+  <Option name="model_name" type="QString" value="River Banks Segments Cutter v.1.1.1"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="left_river_bank" type="Map">
+      <Option name="data_types" type="List">
         <Option type="int" value="1"/>
       </Option>
-      <Option type="invalid" name="default"/>
-      <Option type="invalid" name="defaultGui"/>
-      <Option type="QString" value="Left River Bank" name="description"/>
-      <Option type="int" value="0" name="flags"/>
-      <Option type="QString" value="LBR: Line or multiline feature with Left riverbank to consider.&#xa;This model is tested with a single-feature vector" name="help"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" type="QString" value="Left River Bank"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="help" type="QString" value="LBR: Line or multiline feature with Left riverbank to consider.&#xa;This model is tested with a single-feature vector"/>
       <Option name="metadata"/>
-      <Option type="QString" value="left_river_bank" name="name"/>
-      <Option type="QString" value="vector" name="parameter_type"/>
+      <Option name="name" type="QString" value="left_river_bank"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
     </Option>
-    <Option type="Map" name="lrb">
-      <Option type="bool" value="true" name="create_by_default"/>
-      <Option type="int" value="-1" name="data_type"/>
-      <Option type="invalid" name="default"/>
-      <Option type="invalid" name="defaultGui"/>
-      <Option type="QString" value="LRB" name="description"/>
-      <Option type="int" value="8" name="flags"/>
-      <Option type="QString" value="" name="help"/>
-      <Option type="Map" name="metadata">
-        <Option type="QString" value="native:joinbynearest_1" name="_modelChildId"/>
-        <Option type="QString" value="LRB" name="_modelChildOutputName"/>
-        <Option type="QString" value="native" name="_modelChildProvider"/>
+    <Option name="lrb" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="data_type" type="int" value="-1"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" type="QString" value="LRB"/>
+      <Option name="flags" type="int" value="8"/>
+      <Option name="help" type="QString" value=""/>
+      <Option name="metadata" type="Map">
+        <Option name="_modelChildId" type="QString" value="native:joinbynearest_1"/>
+        <Option name="_modelChildOutputName" type="QString" value="LRB"/>
+        <Option name="_modelChildProvider" type="QString" value="native"/>
       </Option>
-      <Option type="QString" value="lrb" name="name"/>
-      <Option type="QString" value="sink" name="parameter_type"/>
-      <Option type="bool" value="false" name="supports_append"/>
-      <Option type="bool" value="true" name="supports_non_file_outputs"/>
+      <Option name="name" type="QString" value="lrb"/>
+      <Option name="parameter_type" type="QString" value="sink"/>
+      <Option name="supports_append" type="bool" value="false"/>
+      <Option name="supports_non_file_outputs" type="bool" value="true"/>
     </Option>
-    <Option type="Map" name="right_riverbank">
-      <Option type="List" name="data_types">
+    <Option name="right_riverbank" type="Map">
+      <Option name="data_types" type="List">
         <Option type="int" value="1"/>
       </Option>
-      <Option type="invalid" name="default"/>
-      <Option type="invalid" name="defaultGui"/>
-      <Option type="QString" value="Right RiverBank" name="description"/>
-      <Option type="int" value="0" name="flags"/>
-      <Option type="QString" value="RBR: Line or multiline feature with Right riverbank to consider.&#xa;This model is tested with a single-feature vector" name="help"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" type="QString" value="Right RiverBank"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="help" type="QString" value="RBR: Line or multiline feature with Right riverbank to consider.&#xa;This model is tested with a single-feature vector"/>
       <Option name="metadata"/>
-      <Option type="QString" value="right_riverbank" name="name"/>
-      <Option type="QString" value="vector" name="parameter_type"/>
+      <Option name="name" type="QString" value="right_riverbank"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
     </Option>
-    <Option type="Map" name="river_centerline_stretch">
-      <Option type="List" name="data_types">
+    <Option name="river_centerline_reaches" type="Map">
+      <Option name="data_types" type="List">
         <Option type="int" value="1"/>
       </Option>
-      <Option type="invalid" name="default"/>
-      <Option type="invalid" name="defaultGui"/>
-      <Option type="QString" value="River centerline stretch" name="description"/>
-      <Option type="int" value="0" name="flags"/>
-      <Option type="QString" value="RC: Line or multiline feature with River Centerline to consider.&#xa;This model is tested with a single-feature vector" name="help"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" type="QString" value="River centerline reaches"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="help" type="QString" value=""/>
       <Option name="metadata"/>
-      <Option type="QString" value="river_centerline_stretch" name="name"/>
-      <Option type="QString" value="vector" name="parameter_type"/>
+      <Option name="name" type="QString" value="river_centerline_reaches"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
     </Option>
-    <Option type="Map" name="river_stretch_separation_lines">
-      <Option name="data_types"/>
-      <Option type="invalid" name="default"/>
-      <Option type="invalid" name="defaultGui"/>
-      <Option type="QString" value="River stretch Separation lines" name="description"/>
-      <Option type="int" value="0" name="flags"/>
-      <Option type="QString" value="This vector contain only geometries used to cut RB.&#xa;This vector must be complaiant to RC stretches.&#xa;NONE of the field values of this vector will be inherited in the outputs." name="help"/>
-      <Option name="metadata"/>
-      <Option type="QString" value="river_stretch_separation_lines" name="name"/>
-      <Option type="QString" value="vector" name="parameter_type"/>
-    </Option>
-    <Option type="Map" name="rrb">
-      <Option type="bool" value="true" name="create_by_default"/>
-      <Option type="int" value="-1" name="data_type"/>
-      <Option type="invalid" name="default"/>
-      <Option type="invalid" name="defaultGui"/>
-      <Option type="QString" value="RRB" name="description"/>
-      <Option type="int" value="8" name="flags"/>
-      <Option type="QString" value="" name="help"/>
-      <Option type="Map" name="metadata">
-        <Option type="QString" value="native:joinbynearest_2" name="_modelChildId"/>
-        <Option type="QString" value="RRB" name="_modelChildOutputName"/>
-        <Option type="QString" value="native" name="_modelChildProvider"/>
+    <Option name="river_reach_transect_limits" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="1"/>
       </Option>
-      <Option type="QString" value="rrb" name="name"/>
-      <Option type="QString" value="sink" name="parameter_type"/>
-      <Option type="bool" value="false" name="supports_append"/>
-      <Option type="bool" value="true" name="supports_non_file_outputs"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" type="QString" value="River reach transect limits"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="help" type="QString" value=""/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="river_reach_transect_limits"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
+    </Option>
+    <Option name="rrb" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="data_type" type="int" value="-1"/>
+      <Option name="default" type="invalid"/>
+      <Option name="defaultGui" type="invalid"/>
+      <Option name="description" type="QString" value="RRB"/>
+      <Option name="flags" type="int" value="8"/>
+      <Option name="help" type="QString" value=""/>
+      <Option name="metadata" type="Map">
+        <Option name="_modelChildId" type="QString" value="native:joinbynearest_2"/>
+        <Option name="_modelChildOutputName" type="QString" value="RRB"/>
+        <Option name="_modelChildProvider" type="QString" value="native"/>
+      </Option>
+      <Option name="name" type="QString" value="rrb"/>
+      <Option name="parameter_type" type="QString" value="sink"/>
+      <Option name="supports_append" type="bool" value="false"/>
+      <Option name="supports_non_file_outputs" type="bool" value="true"/>
     </Option>
   </Option>
   <Option name="parameterOrder"/>
-  <Option type="Map" name="parameters">
-    <Option type="Map" name="left_river_bank">
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="Line feature with Left riverbank to be used for buffer generation" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="396" name="component_pos_x"/>
-        <Option type="double" value="179" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+  <Option name="parameters" type="Map">
+    <Option name="left_river_bank" type="Map">
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value="Line feature with Left riverbank to be used for buffer generation"/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="422.66666666666663"/>
+        <Option name="component_pos_y" type="double" value="179"/>
+        <Option name="component_width" type="double" value="153.33333333333331"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="left_river_bank" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="196" name="component_pos_x"/>
-      <Option type="double" value="224" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
-      <Option type="QString" value="left_river_bank" name="name"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="component_description" type="QString" value="left_river_bank"/>
+      <Option name="component_height" type="double" value="30"/>
+      <Option name="component_pos_x" type="double" value="196"/>
+      <Option name="component_pos_y" type="double" value="224"/>
+      <Option name="component_width" type="double" value="200"/>
+      <Option name="name" type="QString" value="left_river_bank"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
     </Option>
-    <Option type="Map" name="right_riverbank">
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="Line feature with Right riverbank ti be used for the buffers generation" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="354.66666666666663" name="component_pos_x"/>
-        <Option type="double" value="321.66666666666663" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+    <Option name="right_riverbank" type="Map">
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value="Line feature with Right riverbank ti be used for the buffers generation"/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="364.66666666666663"/>
+        <Option name="component_pos_y" type="double" value="321.66666666666663"/>
+        <Option name="component_width" type="double" value="120"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="right_riverbank" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="154.66666666666666" name="component_pos_x"/>
-      <Option type="double" value="366.66666666666663" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
-      <Option type="QString" value="right_riverbank" name="name"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="component_description" type="QString" value="right_riverbank"/>
+      <Option name="component_height" type="double" value="30"/>
+      <Option name="component_pos_x" type="double" value="154.66666666666666"/>
+      <Option name="component_pos_y" type="double" value="366.66666666666663"/>
+      <Option name="component_width" type="double" value="200"/>
+      <Option name="name" type="QString" value="right_riverbank"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
     </Option>
-    <Option type="Map" name="river_centerline_stretch">
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="Line features that contain the centerline of river.  The vector must be subdivided in single homogeneous stretch. &#xa;Field table contain te erosion rate value of every element" name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="332" name="component_pos_x"/>
-        <Option type="double" value="409.66666666666663" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+    <Option name="river_centerline_reaches" type="Map">
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value="Line features that contain the centerline of river.  The vector must be subdivided in single homogeneous stretch. &#xa;Field table contain te erosion rate value of every element"/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="334.70812077869255"/>
+        <Option name="component_pos_y" type="double" value="415.2677017817346"/>
+        <Option name="component_width" type="double" value="125.33333333333331"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="river_centerline_stretch" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="132" name="component_pos_x"/>
-      <Option type="double" value="454.66666666666663" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
-      <Option type="QString" value="river_centerline_stretch" name="name"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="component_description" type="QString" value="river_centerline_reaches"/>
+      <Option name="component_height" type="double" value="30"/>
+      <Option name="component_pos_x" type="double" value="132"/>
+      <Option name="component_pos_y" type="double" value="454.66666666666663"/>
+      <Option name="component_width" type="double" value="200"/>
+      <Option name="name" type="QString" value="river_centerline_reaches"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
     </Option>
-    <Option type="Map" name="river_stretch_separation_lines">
-      <Option type="QString" value="" name="color"/>
-      <Option type="Map" name="comment">
-        <Option type="QString" value="" name="color"/>
-        <Option type="QString" value="Line features that contain the &quot;cutting&quot; separator from two homogeneous stretch of river." name="component_description"/>
-        <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="406.66666666666663" name="component_pos_x"/>
-        <Option type="double" value="511" name="component_pos_y"/>
-        <Option type="double" value="100" name="component_width"/>
-        <Option type="bool" value="true" name="outputs_collapsed"/>
-        <Option type="bool" value="true" name="parameters_collapsed"/>
+    <Option name="river_reach_transect_limits" type="Map">
+      <Option name="color" type="QString" value=""/>
+      <Option name="comment" type="Map">
+        <Option name="color" type="QString" value=""/>
+        <Option name="component_description" type="QString" value="Line features that contain the &quot;cutting&quot; separator from two homogeneous stretch of river.&#xa;"/>
+        <Option name="component_height" type="double" value="60"/>
+        <Option name="component_pos_x" type="double" value="452.81727172152233"/>
+        <Option name="component_pos_y" type="double" value="555.0528502796349"/>
+        <Option name="component_width" type="double" value="171.3236623575043"/>
+        <Option name="outputs_collapsed" type="bool" value="true"/>
+        <Option name="parameters_collapsed" type="bool" value="true"/>
       </Option>
-      <Option type="QString" value="river_stretch_separation_lines" name="component_description"/>
-      <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="206.66666666666666" name="component_pos_x"/>
-      <Option type="double" value="556" name="component_pos_y"/>
-      <Option type="double" value="200" name="component_width"/>
-      <Option type="QString" value="river_stretch_separation_lines" name="name"/>
-      <Option type="bool" value="true" name="outputs_collapsed"/>
-      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option name="component_description" type="QString" value="river_reach_transect_limits"/>
+      <Option name="component_height" type="double" value="30"/>
+      <Option name="component_pos_x" type="double" value="206.66666666666666"/>
+      <Option name="component_pos_y" type="double" value="556"/>
+      <Option name="component_width" type="double" value="200"/>
+      <Option name="name" type="QString" value="river_reach_transect_limits"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
     </Option>
   </Option>
 </Option>

@@ -175,12 +175,13 @@ linestring in red are the RB in input, the blue line is the river Centerline
 
 ## Riverbanks Distance Comparison RBDC
 
+This model generates a two-epoch comparison of the distance between riverbanks and the river's axis along its path.
+
 ![Riverbanks Distance Comparison](Models/RBDC/images/RBDC-A-400px.png)
 
 --> [Download](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3) v.1.4 model3 file
 
 *Try a new beta-version*: [Download beta v.1.4.1](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.1.model3) model3 file
-
 
 The bank distance comparison model (RBDC) is an implementation of RBD with two banks, which is useful in historical comparison analysis or quantitative analysis of the width of river banks in two epochs.
 
@@ -241,7 +242,10 @@ This is an example of results in maps
 
 This model algorithm segments the RiverBanks (RB) layer into individual units by leveraging the corresponding stretches of the River Centerline (RC) vector. Each resulting unit inherits attribute values from the RC layer, ensuring consistency across datasets. The output delineates distinct reaches of the water body, facilitating detailed hydromorphological analyses and management planning.​
 
+--> [Download model file](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
+--> [Download python script](Models/RBSC/River%20Banks%20Segments%20Cutter.py)
 
+![diagram](Models/RBSC/RBSC_diagram.png)
 
 ### RBSC Input data
 
@@ -258,6 +262,8 @@ NOTE: this model is tested with a single-feature vector for inputs
 2. Get the max lenght of separation lines feature
 3. Use *"proximity"* join (with a threshold distance provided from step #2) to inherit field table values from RC to RB
 
+![model](Models/RBSC/RBSC_model.png)
+
 ### RBSC Output data
 
 - LRB: Left RiverBank reaches
@@ -265,7 +271,8 @@ NOTE: this model is tested with a single-feature vector for inputs
 
 ## RiverBanks Safety Bands Tool
 
-This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into hydrologically homogeneous segments. For each segment, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate.
+This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into reaches. For each reach, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate.
+
 ![Models/RBSB/RBSB_example.png](Models/RBSB/RBSB_example.png)
 
 ### RBSBT Input data
@@ -278,10 +285,14 @@ This algorithm generates safety lines at a distance from the riverbanks, which h
 
 ### RBSBT Procedure description
 
+![diagram](Models/RBSB/RBSB_diagram.png)
+
 1. Create single-side buffer for each of RB usin the formula: $$ D = {{E_r} \cdot {M}} $$
 2. Union geoprocess to merge the two buffer into one feature
 3. Dissolve all feature and hole fitting for purify geometric data
 4. Convert polygon to lines to get output
+
+![model](Models/RBSB/RBSB_model.svg.png)
 
 ### RBSBT Output data
 
