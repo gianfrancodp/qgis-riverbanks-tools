@@ -1,0 +1,41 @@
+# This file is a citation file for the Qgis Riverbanks Tools Suite for Morphological River Analysis
+cff-version: 1.2.0
+title: >-
+  Qgis Riverbanks Tools Suite for Morphological River
+  Analysis
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - family-names: Di Pietro
+    given-names: Gianfranco
+    orcid: 'https://orcid.org/0000-0003-1236-0604'
+  - family-names: Stagnitti
+    given-names: Martina
+    orcid: 'https://orcid.org/0000-0001-8921-5355'
+  - family-names: Pennisi
+    given-names: Valeria
+  - family-names: Foti
+    given-names: Enrico
+    orcid: 'https://orcid.org/0000-0001-8407-1890'
+  - family-names: Musumeci
+    given-names: Rosaria Ester
+    orcid: 'https://orcid.org/0000-0002-1022-0571'
+keywords:
+  - QGIS
+  - riverbanks
+  - hydrology
+  - flood risk management
+  - morphological analysis
+  - geospatial analysis
+  - hydrodynamic fluvial contexts
+  - riverbank erosion
+  - river morphology monitoring
+  - river confinement
+  - riverbank distance analysis
+  - safety bands tool
+  - hydrological data integration
+  - QGIS plugin development
+  - riverbank classification
+license: GPL-3.0
+version: 1.0.0-beta
+date-released: '2025-03-15'
