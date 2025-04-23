@@ -307,9 +307,13 @@ Feel free to contribute, see [Contributing guideline](CONTRIBUTING.md), please r
 
 The work was developed within my research at the University of Catania as Phd student, specific through a Scientific collaboration agreement between the Basin Authority of the Hydrographic District of Sicily [(AdB Sicilia)](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/contatti-dipartimento-autorita-bacino-adb) and the Department of Civil Engineering and Architecture [(DICaR)](https://www.dicar.unict.it) of the University of Catania, for hydrological and hydraulic studies for the identification of river belts, for the identification of NWRM (Natural Water Retention Measures), and for the definition of lamination plans of the rivers.
 
-## Authors
+## How to cite 
 
-How to cite: Di Pietro, G., Stagnitti, M., Pennisi, V., Foti, E., and Musumeci, R. E.: Qgis RiverBanks tools suite for morphological river analysis, EGU General Assembly 2025, Vienna, Austria, 27 Apr–2 May 2025, EGU25-15570, [https://doi.org/10.5194/egusphere-egu25-15570](https://doi.org/10.5194/egusphere-egu25-15570), 2025.
+- Di Pietro, G., Stagnitti, M., Pennisi, V., Foti, E., and Musumeci, R. E.: Qgis RiverBanks tools suite for morphological river analysis, EGU General Assembly 2025, Vienna, Austria, 27 Apr–2 May 2025, EGU25-15570, [https://doi.org/10.5194/egusphere-egu25-15570](https://doi.org/10.5194/egusphere-egu25-15570), 2025.
+
+see [CITATION.cff](CITATION.cff) for more details
+
+Contributors:
 
 - [Gianfranco Di Pietro](https://gianfrancodp.github.io), *PhD student at Università di Catania*
 - Martina Stagnitti, *Researcer at Università di Catania*
