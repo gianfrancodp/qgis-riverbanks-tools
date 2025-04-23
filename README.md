@@ -7,19 +7,17 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
 ## Table of content
 
 0. [News](#news)
-1. [How to use on qgis](#how-to-use-on-qgis)
-2. [Confined Valley Index](#confined-valley-index)
-3. [Riverbanks Distance](#riverbanks-distance-rbd)
-4. [Riverbanks Distance Comparison](#riverbanks-distance-comparison-rbdc)
-5. [RiverBanks Segments Cutter](#riverbanks-segment-cutter)
-6. [RiverBanks Safety Bands tool](#riverbanks-safety-bands-tool)
-7. [Disclaimers and credits](#disclaimer-and-credits)
-8. [Authors](#authors)
-
+1. [How to use on qgis](#1-how-to-use-on-qgis)
+2. [Confined Valley Index](#2-confined-valley-index)
+3. [Riverbanks Distance](#3-riverbanks-distance-rbd)
+4. [Riverbanks Distance Comparison](#4-riverbanks-distance-comparison-rbdc)
+5. [RiverBanks Segments Cutter](#5-riverbanks-segment-cutter-rbsc)
+6. [RiverBanks Safety Bands tool](#6-riverbanks-safety-bands-tool-rbsb)
+7. [Disclaimers and credits](#7-disclaimer-and-credits)
 
 ## NEWS
 
-(Apr, 17 - 2025): Minor update of documentation
+(Apr - 2025): Minor update of documentation and release 1.4.1
 
 (Nov, 25 - 2024)
 
@@ -38,13 +36,17 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
 
 2. (hidden due last update)
 
-Please send us your feedbak! open a issue [here on Github](https://github.com/gianfrancodp/qgis-riverbanks-tools/issues) or send an email to [authors](#authors).
+Please send us your feedbak! open a issue [here on Github](https://github.com/gianfrancodp/qgis-riverbanks-tools/issues) or send an email to autors [see below](#71-how-to-cite).
 
 ---
 
-## How to use on Qgis
+## 1. How to use on Qgis
 
-Download the specific model3 files in this repository:
+[return to TOC](#table-of-content)
+
+A fast-track is to downaload the [zip folder with all models](QgisRiverbanksTool_models_v1.0.zip), extract and add to your QGIS desktop.
+
+To download a specific model3 files in this repository:
 all model3 files are running on Qgis 3.28.11 or higher
 
 - [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3)
@@ -59,13 +61,13 @@ NOTE: If you download file directly from GitHub webpage may assure that the exte
 2. Go to Processing sidebar and go to Model icon menu
 3. Click on "Open existing model" and select the file in your filesystem
 
-## Confined Valley Index
+## 2. Confined Valley Index
 
-v. 1.1 (December 2023)
+[return to TOC](#table-of-content)
 
 [DOWNLOAD PDF schema](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1.drawio.pdf)
 
-### Description
+### 2.1 CVI Description
 
 The algorithm calculates the relationship $C_{VI}$ between the "width" of the ValleyBottom $VB_W$ and the "banks of a river" $RB_W$. and the *banks of a river* $RB_W$.
 
@@ -73,13 +75,13 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
 ![CVIdiagram](Models/CVI/simplified-diagram/Confined_Valley_index_v.1.1-A.jpg)
 
-### Input data
+### 2.2 CVI Input data
 
 | Parameter name    | Data Type     | Description                                                   |
 |-------------------|---------------|---------------------------------------------------------------|
-| LEFT River Bank   | _Vector Line_ | Line of the Left bank                                         |
-| RIGHT River Bank  | _Vector Line_ | Line of the Right bank                                        |
-| River Line        | _Vector Line_ | Path of the river                                             |
+| LEFT River Bank   | *Vector Line* | Line of the Left bank                                         |
+| RIGHT River Bank  | *Vector Line* | Line of the Right bank                                        |
+| River Line        | *Vector Line* | Path of the river                                             |
 | Transects STEP    | Integer       | distance in meters along the path used for creating transects |
 | Transects WIDTH   | Integer       | Lenght in meters of transects across river path               |
 | Valley Bottom     | Polygon       | Polygon features that define the Valley Bottom of the river   |
@@ -88,7 +90,7 @@ $$ C_{Vi} = {{VB_W} \over {RB_W}} $$
 
 Transects are generated, at constant distance from each other along the path, along the river axis; they intersect the right bank, the left bank and the ValleyBottom polygon. The distances between the river axis and the intersections are calculated, the minimum value is taken.
 
-### Output
+### 2.3 CVI Output
 
 In Output a ***Vector Points*** along the river axis containing the calculated data is generated with this attribute table:
 
@@ -108,16 +110,16 @@ An example of the results is shown in this map. A scaled-type symbology was used
 
 ![CVI-example](Models/CVI/CVI%20-%20output%20example.png)
 
------------
+## 3. RiverBanks Distance RBD
 
-## RiverBanks Distance RBD
+[return to TOC](#table-of-content)
 
 ![RDB-example-C](Models/RBD/images/RBD-example-C.png)
 
 --> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.1.model3) Qgis graphical *model3* file
 --> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.1.model3.py) Qgis python script file
 
-### RBD Description
+### 3.1 RBD Description
 
 Distance between banks and axis of a river along each path; useful for morphological analysis.ks and axis of a river along path; useful for morphological analysis.
 
@@ -136,7 +138,7 @@ Here how it works:
 9. Calculation of distances (Left and Right) using attribute data
 10. Field cleaning and output.
 
-### RBD Input data
+### 3.2 RBD Input data
 
 | Parameter name        | Type          | Description                                                   |
 |-----------------------|---------------|---------------------------------------------------------------|
@@ -151,7 +153,7 @@ A too long step decrease accuracy of the output parameters that describe morphol
 
 (**) This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect banks. It is used to generate transects orthogonal to the river simplified centerline
 
-### RBD Output
+### 3.3 RBD Output
 
 This model generate the ***Transects vector features*** along path of the river, and intersection nodes.
 For each transect in attribute table there are Right and Left distance from centerline, useful to calculate banks width.
@@ -173,11 +175,17 @@ linestring in red are the RB in input, the blue line is the river Centerline
 
 ![RBD Example A](Models/RBD/images/RBD-example-A-800px.png)
 
-## Riverbanks Distance Comparison RBDC
+---
+
+## 4. Riverbanks Distance Comparison RBDC
+
+[return to TOC](#table-of-content)
+
+![RBDC-schema.svg](Models/RBDC/images/RBDC-schema.svg)
 
 This model generates a two-epoch comparison of the distance between riverbanks and the river's axis along its path.
 
-![Riverbanks Distance Comparison](Models/RBDC/images/RBDC-A-400px.png)
+![Riverbanks Distance Comparison](Models/RBDC/images/RBDC-A-800px.png)
 
 --> [Download](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3) v.1.4 model3 file
 
@@ -185,7 +193,7 @@ This model generates a two-epoch comparison of the distance between riverbanks a
 
 The bank distance comparison model (RBDC) is an implementation of RBD with two banks, which is useful in historical comparison analysis or quantitative analysis of the width of river banks in two epochs.
 
-### RBDC Input data
+### 4.1 RBDC Input data
 
 | Parameter name                    | Type          | Description                                                   |
 |-----------------------------------|---------------|---------------------------------------------------------------|
@@ -203,7 +211,7 @@ A too long step decrease accuracy of the output parameters that describe morphol
 
 (**) This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect banks. It is used to generate transects orthogonal to the river simplified centerline
 
-### RBDC Output
+### 4.2 RBDC Output
 
 This model generate 2 layers:
 
@@ -238,7 +246,9 @@ This is an example of results in maps
 
 ![RBDC Example C](Models/RBDC/images/RBDC-C.png)
 
-## RiverBanks Segment Cutter
+## 5. RiverBanks Segment Cutter (RBSC)
+
+[return to TOC](#table-of-content)
 
 This model algorithm segments the RiverBanks (RB) layer into individual units by leveraging the corresponding stretches of the River Centerline (RC) vector. Each resulting unit inherits attribute values from the RC layer, ensuring consistency across datasets. The output delineates distinct reaches of the water body, facilitating detailed hydromorphological analyses and management planning.​
 
@@ -247,7 +257,7 @@ This model algorithm segments the RiverBanks (RB) layer into individual units by
 
 ![diagram](Models/RBSC/RBSC_diagram.png)
 
-### RBSC Input data
+### 5.1 RBSC Input data
 
 NOTE: this model is tested with a single-feature vector for inputs
 
@@ -256,7 +266,7 @@ NOTE: this model is tested with a single-feature vector for inputs
 - RC stretch: Line or multiline feature with River Centerline to consider.
 - River stretch separation lines: This vector contain only geometries used to cut RB. NONE of the field values of this vector will be inherited in the outputs.
 
-### RBSC Procedure description
+### 5.2 RBSC Procedure description
 
 1. Cut RB with separation lines vector
 2. Get the max lenght of separation lines feature
@@ -264,18 +274,20 @@ NOTE: this model is tested with a single-feature vector for inputs
 
 ![model](Models/RBSC/RBSC_model.png)
 
-### RBSC Output data
+### 5.3 RBSC Output data
 
 - LRB: Left RiverBank reaches
 - RRB: Right RiverBank reaches
 
-## RiverBanks Safety Bands Tool
+## 6. RiverBanks Safety Bands Tool (RBSB)
+
+[return to TOC](#table-of-content)
 
 This algorithm generates safety lines at a distance from the riverbanks, which have been previously divided into reaches. For each reach, a buffer distance is determined using a multiplicative factor of the riverbank erosion rate.
 
 ![Models/RBSB/RBSB_example.png](Models/RBSB/RBSB_example.png)
 
-### RBSBT Input data
+### 6.1 RBSB Input data
 
 - *LEFT side RiverBank*: Vector that contain the LEFT side of Riverbank segments. This vector must contain at least a field with the year erosion rate to be used in calculus
 - *Left Erosion Rate field*: Name of the field with values of Erosion Rate
@@ -283,7 +295,7 @@ This algorithm generates safety lines at a distance from the riverbanks, which h
 - *Right Erosion Rate field*:  Name of the field with values of Erosion Rate
 - *M factor for buffers*: the multiplicative factor of the erosion rate used to determine the buffer distance from riverbanks
 
-### RBSBT Procedure description
+### 6.2 RBSB Procedure description
 
 ![diagram](Models/RBSB/RBSB_diagram.png)
 
@@ -294,12 +306,13 @@ This algorithm generates safety lines at a distance from the riverbanks, which h
 
 ![model](Models/RBSB/RBSB_model.svg.png)
 
-### RBSBT Output data
+### 6.3 RBSB Output data
 
 - *Offset line*: a MultiLine vector with Bands limit.
 
+## 7. Disclaimer and credits
 
-## Disclaimer and credits
+[return to TOC](#table-of-content)
 
 This repository contains algorithms that for calculating and analyzing some hydrographic features that are useful for analyses on historical course trends and river geometry.
 
@@ -307,7 +320,7 @@ Feel free to contribute, see [Contributing guideline](CONTRIBUTING.md), please r
 
 The work was developed within my research at the University of Catania as Phd student, specific through a Scientific collaboration agreement between the Basin Authority of the Hydrographic District of Sicily [(AdB Sicilia)](https://www.regione.sicilia.it/istituzioni/regione/strutture-regionali/presidenza-regione/autorita-bacino-distretto-idrografico-sicilia/contatti-dipartimento-autorita-bacino-adb) and the Department of Civil Engineering and Architecture [(DICaR)](https://www.dicar.unict.it) of the University of Catania, for hydrological and hydraulic studies for the identification of river belts, for the identification of NWRM (Natural Water Retention Measures), and for the definition of lamination plans of the rivers.
 
-## How to cite 
+### 7.1 How to cite
 
 - Di Pietro, G., Stagnitti, M., Pennisi, V., Foti, E., and Musumeci, R. E.: Qgis RiverBanks tools suite for morphological river analysis, EGU General Assembly 2025, Vienna, Austria, 27 Apr–2 May 2025, EGU25-15570, [https://doi.org/10.5194/egusphere-egu25-15570](https://doi.org/10.5194/egusphere-egu25-15570), 2025.
 
