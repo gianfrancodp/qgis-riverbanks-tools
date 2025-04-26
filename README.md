@@ -1,6 +1,6 @@
 # Qgis riverbanks tools
 
-![header](Models/other_data/QRT_main_image.png)
+![header](readme_assets/QRBT_main_splash_v2.png)
 
 A simple tools for analysis of banks of a river in Qgis; algorytms and scripts are written with Qgis 3 graphical modeler and Python.
 
@@ -9,9 +9,9 @@ A simple tools for analysis of banks of a river in Qgis; algorytms and scripts a
 0. [News](#news)
 1. [How to use on qgis](#1-how-to-use-on-qgis)
 2. [Confined Valley Index](#2-confined-valley-index)
-3. [Riverbanks Distance](#3-riverbanks-distance-rbd)
-4. [Riverbanks Distance Comparison](#4-riverbanks-distance-comparison-rbdc)
-5. [RiverBanks Segments Cutter](#5-riverbanks-segment-cutter-rbsc)
+3. [RiverBanks Segments Cutter](#3-riverbanks-segment-cutter-rbsc)
+4. [Riverbanks Distance](#4-riverbanks-distance-rbd)
+5. [Riverbanks Distance Comparison](#5-riverbanks-distance-comparison-rbdc)
 6. [RiverBanks Safety Bands tool](#6-riverbanks-safety-bands-tool-rbsb)
 7. [Disclaimers and credits](#7-disclaimer-and-credits)
 
@@ -49,11 +49,11 @@ A fast-track is to downaload the [zip folder with all models](QgisRiverbanksTool
 To download a specific model3 files in this repository:
 all model3 files are running on Qgis 3.28.11 or higher
 
-- [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3)
-- [Riverbanks Distance](Models/RBD/River%20Banks%20Distance%20v.1.4.model3)
-- [River Banks Distance Comparison](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3)
-- [RiverBanks Segments Cutter](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
-- [RiverBanks Safety Bands tool](Models/RBSB/RB%20Safety%20Bands%20tool.model3)
+1. [Confined Valley Index](Models/CVI/Confined_Valley_Index_v.1.1.model3)
+2. [RiverBanks Segments Cutter](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
+3. [Riverbanks Distance](Models/RBD/River%20Banks%20Distance%20v.1.4.model3)
+4. [River Banks Distance Comparison](Models/RBDC/River%20Banks%20Distance%20Comparison%20v.1.4.model3)
+5. [RiverBanks Safety Bands tool](Models/RBSB/RB%20Safety%20Bands%20tool.model3)
 
 NOTE: If you download file directly from GitHub webpage may assure that the extension of file must be .model3 for properly use in Qgis
 
@@ -62,6 +62,8 @@ NOTE: If you download file directly from GitHub webpage may assure that the exte
 3. Click on "Open existing model" and select the file in your filesystem
 
 ## 2. Confined Valley Index
+
+![CVI_icon](Models/CVI/icon/CVI_128px.png)
 
 [return to TOC](#table-of-content)
 
@@ -110,7 +112,44 @@ An example of the results is shown in this map. A scaled-type symbology was used
 
 ![CVI-example](Models/CVI/CVI%20-%20output%20example.png)
 
-## 3. RiverBanks Distance RBD
+## 3. RiverBanks Segment Cutter (RBSC)
+
+![RBSC_icon](Models/RBSC/icon/RBSC_128px.png)
+
+[return to TOC](#table-of-content)
+
+This model algorithm segments the RiverBanks (RB) layer into individual units by leveraging the corresponding stretches of the River Centerline (RC) vector. Each resulting unit inherits attribute values from the RC layer, ensuring consistency across datasets. The output delineates distinct reaches of the water body, facilitating detailed hydromorphological analyses and management planning.​
+
+--> [Download model file](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
+--> [Download python script](Models/RBSC/River%20Banks%20Segments%20Cutter.py)
+
+![diagram](Models/RBSC/RBSC_diagram.png)
+
+### 3.1 RBSC Input data
+
+NOTE: this model is tested with a single-feature vector for inputs
+
+- LBR: Line or multiline feature with Left riverbank to consider.
+- RBR: Line or multiline feature with Right riverbank to consider.
+- RC stretch: Line or multiline feature with River Centerline to consider.
+- River stretch separation lines: This vector contain only geometries used to cut RB. NONE of the field values of this vector will be inherited in the outputs.
+
+### 3.2 RBSC Procedure description
+
+1. Cut RB with separation lines vector
+2. Get the max lenght of separation lines feature
+3. Use *"proximity"* join (with a threshold distance provided from step #2) to inherit field table values from RC to RB
+
+![model](Models/RBSC/RBSC_model.png)
+
+### 3.3 RBSC Output data
+
+- LRB: Left RiverBank reaches
+- RRB: Right RiverBank reaches
+
+## 4. RiverBanks Distance RBD
+
+![RBD_icon](Models/RBD/icon/RBD_128px.png)
 
 [return to TOC](#table-of-content)
 
@@ -119,7 +158,7 @@ An example of the results is shown in this map. A scaled-type symbology was used
 --> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.1.model3) Qgis graphical *model3* file
 --> [Download](Models/RBD/River%20Banks%20Distance%20v.1.4.1.model3.py) Qgis python script file
 
-### 3.1 RBD Description
+### 4.1 RBD Description
 
 Distance between banks and axis of a river along each path; useful for morphological analysis.ks and axis of a river along path; useful for morphological analysis.
 
@@ -138,7 +177,7 @@ Here how it works:
 9. Calculation of distances (Left and Right) using attribute data
 10. Field cleaning and output.
 
-### 3.2 RBD Input data
+### 4.2 RBD Input data
 
 | Parameter name        | Type          | Description                                                   |
 |-----------------------|---------------|---------------------------------------------------------------|
@@ -153,7 +192,7 @@ A too long step decrease accuracy of the output parameters that describe morphol
 
 (**) This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect banks. It is used to generate transects orthogonal to the river simplified centerline
 
-### 3.3 RBD Output
+### 4.3 RBD Output
 
 This model generate the ***Transects vector features*** along path of the river, and intersection nodes.
 For each transect in attribute table there are Right and Left distance from centerline, useful to calculate banks width.
@@ -177,7 +216,9 @@ linestring in red are the RB in input, the blue line is the river Centerline
 
 ---
 
-## 4. Riverbanks Distance Comparison RBDC
+## 5. Riverbanks Distance Comparison RBDC
+
+![RBDC_icon](Models/RBDC/icon/RBDC_128px.png)
 
 [return to TOC](#table-of-content)
 
@@ -193,7 +234,7 @@ This model generates a two-epoch comparison of the distance between riverbanks a
 
 The bank distance comparison model (RBDC) is an implementation of RBD with two banks, which is useful in historical comparison analysis or quantitative analysis of the width of river banks in two epochs.
 
-### 4.1 RBDC Input data
+### 5.1 RBDC Input data
 
 | Parameter name                    | Type          | Description                                                   |
 |-----------------------------------|---------------|---------------------------------------------------------------|
@@ -211,7 +252,7 @@ A too long step decrease accuracy of the output parameters that describe morphol
 
 (**) This value must be large enough, equal to at least twice the maximum distance at which the bank could be to intersect banks. It is used to generate transects orthogonal to the river simplified centerline
 
-### 4.2 RBDC Output
+### 5.2 RBDC Output
 
 This model generate 2 layers:
 
@@ -246,40 +287,11 @@ This is an example of results in maps
 
 ![RBDC Example C](Models/RBDC/images/RBDC-C.png)
 
-## 5. RiverBanks Segment Cutter (RBSC)
-
-[return to TOC](#table-of-content)
-
-This model algorithm segments the RiverBanks (RB) layer into individual units by leveraging the corresponding stretches of the River Centerline (RC) vector. Each resulting unit inherits attribute values from the RC layer, ensuring consistency across datasets. The output delineates distinct reaches of the water body, facilitating detailed hydromorphological analyses and management planning.​
-
---> [Download model file](Models/RBSC/River%20Banks%20Segments%20Cutter.model3)
---> [Download python script](Models/RBSC/River%20Banks%20Segments%20Cutter.py)
-
-![diagram](Models/RBSC/RBSC_diagram.png)
-
-### 5.1 RBSC Input data
-
-NOTE: this model is tested with a single-feature vector for inputs
-
-- LBR: Line or multiline feature with Left riverbank to consider.
-- RBR: Line or multiline feature with Right riverbank to consider.
-- RC stretch: Line or multiline feature with River Centerline to consider.
-- River stretch separation lines: This vector contain only geometries used to cut RB. NONE of the field values of this vector will be inherited in the outputs.
-
-### 5.2 RBSC Procedure description
-
-1. Cut RB with separation lines vector
-2. Get the max lenght of separation lines feature
-3. Use *"proximity"* join (with a threshold distance provided from step #2) to inherit field table values from RC to RB
-
-![model](Models/RBSC/RBSC_model.png)
-
-### 5.3 RBSC Output data
-
-- LRB: Left RiverBank reaches
-- RRB: Right RiverBank reaches
+***
 
 ## 6. RiverBanks Safety Bands Tool (RBSB)
+
+![RBSB_icon](Models/RBSB/icon/RBSB_128px.png)
 
 [return to TOC](#table-of-content)
 
